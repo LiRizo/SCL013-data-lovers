@@ -2,11 +2,8 @@
 
 ## Índice
 
-* [1. Preámbulo](#1-preámbulo)
-* [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
+* [1. Resumen del proyecto](#1-resumen-del-proyecto)
+* [2. Criterios del proyecto](#2-criterios-del-proyecto)
 * [6. Parte adicional-opcional](#6-parte-adicional-opcional)
 * [7. Consideraciones técnicas](#7-consideraciones-técnicas)
 * [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
@@ -14,176 +11,75 @@
 
 ***
 
-## 1. Preámbulo
+## 1. Resumen del proyecto
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+En este proyecto **construimos una _página web_ para visualizar un
+_conjunto de datos_** que se adecúa a lo que nuestros usuarios
+necesitan.
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
+En esta ocasión decidimos trabajar con: 
 
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por el usuario
-al lado derecho.
-
-![json-interfaz](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
-
-## 2. Resumen del proyecto
-
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
-
-Como entregable final tendrás una página web que permita a los usuarios
-**visualizar, filtrar, ordenar, etc.**.
-
-Te proponemos una serie de datos de diferentes _temáticas_ para que los
-explores y decidas con cuál te interesa trabajar. Cada _set_ de datos viene con
-información básica sobre los datos y su estructura, y una lista de las
-necesidades de los usuarios que proviene de una investigación (_research_)
-hecha por el equipo de Laboratoria.
-
-Una vez que elijas, diseña tu proyecto intentando ofrecerle la mejor experiencia
-posible para ayudarle a satisfacer sus necesidades.
-
-Estos son datos que te proponemos:
-
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 151 Pokémon de la región de Kanto, junto con sus respectivas estadísticas usadas en el juego
+* [Pokémon]:
+  En este set trabajamos con los 151 Pokémon de la región de Kanto, mostrando de la forma que analizamos mejor para nuestros usuarios del juego
   [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
 
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
 
-* [Harry Potter](src/data/potter/potter.json).
-  Este set de datos muestra la lista de los personajes del mundo de [Harry Potter: Wizards Unite](https://www.wizardingworld.com/), junto con sus respectivas características mencionadas en la serie de novelas de Harry Potter escrita por la autora británica J.K.Rowling.
-  - [Investigación con jugadores de Harry Potter: Wizards Unite](src/data/potter/README.md)
-
-## 3. Objetivos de aprendizaje
-
-El objetivo principal de este proyecto es que, entendiendo las necesidades de tus usuarios, aprendas a diseñar y construir una interfaz web donde se pueda visualizar y manipular data.
-
-Revisa la lista y reflexiona sobre los objetivos que conseguiste en el proyecto anterior. Piensa en eso al decidir tu estrategia de trabajo individual y de equipo.
-
-### UX
-- [ ] Diseñar la aplicación pensando y entendiendo al usuario.
-- [ ] Crear prototipos para obtener feedback e iterar.
-- [ ] Aplicar los principios de diseño visual (contraste, alineación, jerarquía).
-- [ ] Planear y ejecutar tests de usabilidad.
-
-### HTML y CSS
-- [ ] Entender y reconocer por qué es importante el HTML semántico.
-- [ ] Identificar y entender tipos de selectores en CSS.
-- [ ] Entender como funciona  `flexbox` en CSS.
-- [ ] Construir tu aplicación respetando el diseño planeado (maquetación).
-
-### DOM
-- [ ] Entender y reconocer los selectores del DOM (querySelector | querySelectorAll).
-- [ ] Manejar eventos del DOM. (addEventListener)
-- [ ] Manipular dinámicamente el DOM. (createElement, appendchild, innerHTML, value)
-
-### Javascript
-- [ ] Manipular arrays (`filter` | `map` | `sort` | `reduce`).
-- [ ] Manipular objects (key | value).
-- [ ] Entender el uso de condicionales (`if-else` | `switch`).
-- [ ] Entender el uso de bucles (`for` | `forEach`).
-- [ ] Entender la diferencia entre expression y statements.
-- [ ] Utilizar funciones (parámetros | argumentos | valor de retorno).
-- [ ] Entender la diferencia entre tipos de datos atómicos y estructurados.
-- [ ] Utilizar ES Modules (`import` | `export`).
-
-### Pruebas Unitarias (_testing_)
-- [ ] Testear funciones (funciones puras).
-
-### Git y GitHub
-- [ ] Ejecutar comandos de git (`add` | `commit` | `pull` | `status` | `push`).
-- [ ] Utilizar los repositorios de GitHub (`clone` | `fork` | gh-pages).
-- [ ] Colaborar en Github (pull requests).
-
-### Buenas prácticas de desarrollo
-- [ ] Organizar y dividir el código en módulos (Modularización).
-- [ ] Utilizar identificadores descriptivos (Nomenclatura | Semántica).
-- [ ] Utilizar linter para seguir buenas prácticas (ESLINT).
-
-### Soft skills
-- [ ] **Planificación, organización y manejo del tiempo** Organizarse utilizando historias de usuario, haciendo una estimación general de los tiempos que se necesitarán para la realización del proyecto. Conocer las ceremonias y artefactos ágiles (sprint planning, dailys, retrospectiva, tablero al menos, etc) a pesar de que no se utilicen con regularidad. 
-
-- [ ] **Trabajo en equipo** Trabajar con otros de forma colaborativa y en base a un objetivo común, entregando ideas para la construcción del proyecto
-
-- [ ] **Autoaprendizaje** Demostrar interés y adquirir nuevos conocimientos autónomamente, estudiando de manera independiente, lo que se traduce, en que cuando es necesario, la estudiante buscará aclarar conceptos y resolver dudas sobre la materia.
-
-- [ ] **Presentaciones** Utilizar ciertas estrategias para hablar en público (tono y ritmo de voz adecuado, contacto visual con el público, interacción con medios de presentación), que permitan asegurar un mediano entendimiento de la audiencia.
-
-- [ ] **Adaptabilidad** Afrontar los cambios inesperados o nuevos desafíos con una actitud positiva, aunque no necesariamente se logre accionar o adaptarse de la mejor manera a los diferentes contextos.
-
-- [ ] **Solución de problemas** Trabajar en la búsqueda y en la elaboración de soluciones alternativas a problemas de mediana complejidad.
-
-- [ ] **Responsabilidad** Demostrar actitud de compromiso, reflejandolo en la entrega de trabajo a tiempo, llegando a la hora acordada y/o avisando cuando no se pueda asistir.
-
-- [ ] **Dar y recibir feedback** Escuchar los comentarios y críticas de los demás de manera respetuosa, y/o comunicar a los demás las opiniones de forma constructiva.
-
-- [ ] **Comunicación eficaz** Comunicar ideas a los demás cuando es necesario, aunque no siempre se fomenten de manera proactiva estas instancias de comunicación.
-
-## 4. Consideraciones generales
-
-* Este proyecto se debe resolver en duplas.
-* El proyecto será entregado subiendo tu código a GitHub (`commit`/`push`) y la
-  interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
-* Tiempo para completarlo: Toma como referencia 3 semanas (15 días hábiles).
-
-## 5. Criterios de aceptación mínimos del proyecto
-
-Los criterios para considerar que has completado este proyecto son:
+## 2. Criterios del proyecto
 
 ### Definición del producto
 
-Documenta brevemente tu trabajo en el archivo `README.md` de tu repositorio,
-contándonos cómo fue tu proceso de diseño y cómo crees que el producto resuelve
-el problema (o problemas) que tiene tu usuario.
+Tomando en consideración los set presentados decidimos trabajar con la data de Pokémon Go,
+nuestro proceso de diseño contempla la realización de una aplicación web donde el usuario pueda ingresar 
+y realizar búsqueda directa de todos los pokémon o de los diferentes tipos y la correspodiente tarjeta con toda la información por pokémon.
+Este producto ayuda a que nuestros usuarios puedan obtener la información necesaria para tomar mejores decisiones con respecto a escoger a sus Pokémon para la batalla, ya sea en Gimnasios o contra otros Entrenadores, y para Usuarios Novatos (aquellos que recién comienzan a jugar o se quieren interiorizar y conocer más de Pokémon) entregar una información clara sobre cada criatura de la Región de Kanto.
+Dentro de las consideraciones realizamos un sketch de diseño visualizando a grandes raasgos lo que pretendíamos realizar.
+
 
 ### Historias de usuario
 
-Una vez que entiendas las necesidades de tus usuarios, escribe las [Historias
-de Usuario](https://es.wikipedia.org/wiki/Historias_de_usuario) que representen
-todo lo que el usuario necesita hacer/ver. Las **Historias de Usuario** deben
-ser el resultado de tu proceso de investigación o _research_ de tus usuarios.
+Historia 1:
+**Usuario Juzera:** No es jugadora Pokémon Go (Novata)
+**Necesita:** Conocer conceptos básicos (Pokémon, Pokédex, Tipo Pokémon)
+**Para:** Poder entender de mejor manera la app web presentada
+**Criterios de aceptación:** Agregar información sobre ¿Qué es un Pokémon?, ¿Qué es Pokédex? y ¿Qué es un tipo de Pokémon? para usuarios novatos con quienes se testeó el prototipo de baja fidelidad.
+**Definición de Terminado:** Se agrega preguntas detalladas anteriormente, con breve y clara explicación para mejor entendimiento de usuarios novatos.
 
-Asegúrate de incluir la definición de terminado (_definition of done_) y los
-Criterios de Aceptación para cada una.
+Historia 2:
+**Usuario Ariana:** No es jugadora Pokémon Go (Novata)
+**Necesita:** Visualizar un menú en el encabezado de la página.
+**Para:** Poder moverse libremente dentro de la app web.
+**Criterios de aceptación:** Agregar menú superior (heather) con información sobre las páginas y ubicación para facilitar el acceso.
+**Definición de Terminado:** Se agrega menú en heather, incluye "Menú Novato" (preguntas) y "Menú Entrenador" (pokédex y tipos).
 
-En la medida de lo posible, termina una historia de usuario antes de pasar
-a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación).
+Historia 3:
+**Usuario Sebastián:** Jugador Pokémon Go 
+**Necesita:** Conocer debilidades y fortalezas, imagen de nostalgia (Pokébola 8bit, Pokémon para Game Boy)
+**Para:** Obtener mayor información sobre sus Pokémon para la batalla en Gimnasios, contra otros Entrenadores e Incursiones.
+**Criterios de aceptación:** Agregar información sobre Fortalezas (Debilidades se encontraban en sketch)
+**Definición de Terminado:** Se agrega información detallada anteriormente, se incluyen pokébola 8bit como marco en esquinas de la página, se reordena imagen en ficha pokémon y se incluye Fortalezas, además se agrega cantidad de caramelos para evolucionar, información distribuida de forma más clara.
+
 
 ### Diseño de la Interfaz de Usuario
 
 #### Prototipo de baja fidelidad
 
-Durante tu trabajo deberás haber hecho e iterado bocetos (_sketches_) de tu
-solución usando papel y lápiz. Te recomendamos tomar fotos de todas las
-iteraciones que hagas, que las subas a tu repositorio y las menciones en tu
-`README.md`.
+Dentro de los inicios de nuestro proyecto realizamos el diseño (sketch) del prototipo básico, el cual mostramos a continuación.
+
+<img src="./../SCL013-data-lovers/sketch.jpeg">
+
+Al momento de realizar iteraciones con posibles usuarios realizamos el prototipo de baja fidelidad en el programa InVision, con el cual realizamos testeo en usuarios quienes nos proporcionaron información para mejorar este diseño y del cual pudimos obtener nuestras primeras Historias de Usuario.
+
+[Prototipo de Baja Fidelidad](https://www.loom.com/share/993af3c624d14d22a3b266d1fb6b85d5)
 
 #### Prototipo de alta fidelidad
 
-Lo siguiente es diseñar tu Interfaz de Usuario (UI por sus siglas en inglés -
-_User Interface_). Para eso debes aprender a utilizar alguna herramienta de
-diseño visual. Nosotros te recomendamos [Figma](https://www.figma.com/) que es
-una herramienta que funciona en el navegador y, además, puedes crear una cuenta
-gratis. Sin embargo, eres libre de utilizar otros editores gráficos como
-Illustrator, Photoshop, PowerPoint, Keynote, etc. Recuerda utilizar la
-[identidad gráfica](https://drive.google.com/open?id=1eeWFqrWpy-OYOH4EHDckFGunyrm9iNeE)
-correspondiente a cada set de datos que elijas.
+Al obtener los feedbacks necesarios nos propusimos realizar los cambios sugeridos para así lograr una mejor experiencia para nuestros usuarios, éste diseño se asemeja bastante a nuestro diseño real.
 
-El diseño debe representar el _ideal_ de tu solución. Digamos que es lo que
-desearías implementar si tuvieras tiempo ilimitado para trabajar. Además, tu
-diseño debe seguir los fundamentos de _visual design_.
+[Prototipo de Alta Fidelidad](https://www.loom.com/share/431f892a79a04b3a89417547e205f83e)
+
+En este diseño tratamos de utilizar una paleta de colores simple y en relación con la temática, la cual mostramos a continuación.
+
+<img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/ColoresPagPokemon-02.png">
 
 #### Testeos de usabilidad
 

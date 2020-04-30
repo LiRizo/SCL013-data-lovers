@@ -1,12 +1,41 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <title>PokeLovers</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <ul>
+        <li><img src="https://vignette.wikia.nocookie.net/es.pokemon/images/1/19/Logo_Pok%C3%A9mon_GO.png/revision/latest?cb=20150910124751"></li>
+        <li><a href="#index.html">Inicio</a></li>
+
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Menú Novato</a>
+            <div class="dropdown-content">
+                <a href="#">¿Qué es un Pokémon?</a>
+                <a href="#">¿Qué es Pokédex?</a>
+                <a href="#">¿Qué es un Tipo de Pokémon?</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#" class="dropbtn">Menú Entrenador</a>
+            <div class="dropdown-content">
+                <a href="#">Pokédex</a>
+                <a href="#">Tipos</a>
+            </div>
+        </li>
+
+        <input type="text" id="formulario" class="form-control" placeholder="Buscar">
+        <button class="btn" id="lupa">Buscar</button>
+
+    </ul>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
-  </body>
+
+</body>
+
 </html>
