@@ -4,15 +4,30 @@ import { allPokeData, orderDataAz, orderDataZa } from './data.js';
 const card = document.getElementById("viewCardCreate");
 
 //Búsqueda interna (header) 
-//const formulario = document.querySelector('#formulario');
-//const lupa = document.querySelector('#lupa');
+const form = document.querySelector('#form');
+const lupa = document.querySelector('#lupa');
+const result = document.querySelector('#root');
 
-//const buscar = () => {
-//console.log(formulario.value);
-//const texto = formulario.value
-//}
+const search = () => {
+    result.innerHTML = '';
 
-//lupa.addEventListener('click', buscar)
+    const text = form.value.toLowerCase();
+
+    for (let pokeInfo of allPokeInfo) {
+        let name = pokeInfo.name.toLowerCase();
+        if (name.indexOf(text) !== -1) {
+            result.innerHTML += `
+            <div class= "elemCard">${allPokeInfo}</div>` //traer el array
+        }
+    }
+    if (result.innerHTML === '') {
+        result.innerHTML += `
+        <div class="elemCard">Pokémon no encontrado</div>`
+    }
+}
+
+lupa.addEventListener('click', search)
+form.addEventListener('keyup', search)
 
 //Imprimir imagen gif inicial
 

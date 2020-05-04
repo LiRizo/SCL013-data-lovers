@@ -79,6 +79,23 @@ button.btn {
     border-radius: 2px;
 }
 
+div.flex-search {
+    float: right;
+}
+
+input.form-control {
+    border-radius: 30px;
+    padding: 4px 6px;
+    margin-top: 20px;
+}
+
+#lupa {
+    float: right;
+    margin-top: 25px;
+    width: 30px;
+    height: 30px;
+}
+
 
 /*Gif inicial*/
 
