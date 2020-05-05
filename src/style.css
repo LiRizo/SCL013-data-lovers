@@ -10,9 +10,9 @@ ul {
     border-radius: 3px;
 }
 
-img {
-    width: 90px;
-    height: 60px;
+#LogoP {
+    width: 150px;
+    height: 58px;
     margin-left: 10px;
     text-align: left;
     vertical-align: center;
@@ -70,14 +70,23 @@ li.dropdown {
     display: block;
 }
 
-#Marco1{  
+#marco1{  
 position: absolute;
 width: 37px;
 height: 37px;
 left: 17px;
 top: 146px;
-background: url(images/PokebolaMarco.png);
+/*background: url('images/PokebolaMarco.png');*/
 }
+#gifPoke {  
+position: absolute;
+width: 500px;
+height: 352px;
+left: 470px;
+top: 356px;
+background: url('images/pokemon-iniciales.gif');
+}
+
 .lookCard {
     width: 90%;
     margin: auto; 

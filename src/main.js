@@ -35,12 +35,21 @@ const search = () => {
 lupa.addEventListener('click', search)
 //form.addEventListener('keyup', search)
 //lupa.addEventListener('click', buscar)
-//imprimir pokeMarco
+
+/*imprimir pokeMarco no funciona ya que se debe hacer todo de un lado o si no no pesca :S
 //div
+const fondo = document.createElement("div");
+const marco = document.createElement("img");
+
+fondo.classList.add = "img-box";
+marco.classList.add = "img-box-image";
+marco.src =  '<img id="marco1" src="./images/PokebolaMarco.png"/>';
+
+document.getElementById("origin").innerHTML = fondo.appendChild(marco);*/
 
 
-//Imprimir imagen gif inicial
-document.getElementById("origin").innerHTML = '<img id="gif" src="./images/pokemon-iniciales.gif"/>';
+/*Imprimir imagen gif inicial
+document.getElementById("origin").innerHTML = '<img id="gif" src="./images/pokemon-iniciales.gif"/>';*/
 //crearElement('div', 'origin', 'gifPoke');
 //crearElement('IMG', "gif", "origin", '', '', "./images/pokemon-iniciales.gif");
 
