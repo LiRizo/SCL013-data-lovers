@@ -69,3 +69,36 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+#Marco1{  
+position: absolute;
+width: 37px;
+height: 37px;
+left: 17px;
+top: 146px;
+background: url(images/PokebolaMarco.png);
+}
+.lookCard {
+    width: 90%;
+    margin: auto; 
+ }
+ .lookPoke{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+ /*.numberPoke{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}*/
+
+/*Vista de pag*/
+#origin {
+    display: auto;
+}
+
+
+.pokePag {
+    display: none;
+}

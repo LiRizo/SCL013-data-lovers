@@ -6,34 +6,162 @@
     <title>PokeLovers</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dc9ad3619f.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <ul>
-        <li><img src="https://vignette.wikia.nocookie.net/es.pokemon/images/1/19/Logo_Pok%C3%A9mon_GO.png/revision/latest?cb=20150910124751"></li>
-        <li><a href="#index.html">Inicio</a></li>
+    <div class="flex-container">
+        <ul>
+            <li><img src="./images/Pokelovers.png"></li>
+            <li><a href="#index.html" id="#inicio">Inicio</a></li>
 
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Menú Novato</a>
-            <div class="dropdown-content">
-                <a href="#">¿Qué es un Pokémon?</a>
-                <a href="#">¿Qué es Pokédex?</a>
-                <a href="#">¿Qué es un Tipo de Pokémon?</a>
+            <li class="dropdown">
+                <a href="#novato" class="dropbtn">Novato</a>
+                <div class="dropdown-content">
+                    <a href="#pokemon">¿Qué es un Pokémon?</a>
+                    <a href="#pokedex">¿Qué es Pokédex?</a>
+                    <a href="#pokeTipo">¿Qué es un Tipo de Pokémon?</a>
+                </div>
+            </li>
+            <li class="dropdown">
+                <a href="#" class="dropbtn">Entrenador</a>
+                <div class="dropdown-content">
+                    <a href="#"id="all" value="all">Pokédex</a>
+                    <a href="#">Tipos</a>
+                </div>
+            </li>
+
+            <input type="text" id="formulario" class="form-control" placeholder="Buscar">
+            <i class="fas fa-search" type="button" id="lupa"></i>
+
+        </ul>
+
+       <!-- <img src="./images/PokebolaMarco.png" class="marco">
+        <img src="./images/PokebolaMarco.png" class="marcob">-->
+        <br>
+        <section id="origin">
+            <h1 class="text">¡¡Bienvenido a PokéLovers, nuestra Guía Pokémon, queremos saber si eres un Jugador Novato o si ya eres un Entrenador Pokémon, escoge una categoría!!</h1>
+            <!--<div><img src="./images/pokemon-iniciales.gif" class="gif"></div>
+ <div id="gifPoke"></div>-->
+            <a href="#novato"><button class="boton">Jugador Novato</button></a>
+            <a href="#entrenador"><button class="boton">Entrenador Pokémon</button></a>
+        </section>
+       <!-- <br><br><br><br>
+        <img src="./images/PokebolaMarco.png" class="marco">
+        <img src="./images/PokebolaMarco.png" class="marcob">
+        <br>
+
+        <br><br><br><br><br><br><br>-->
+        <section id="novato" class="pokePag">
+            <br>
+            <div class="container">
+                <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
+                <a href="#pokedex"><button class="novato">¿Qué es Pokédex?</button></a>
+                <a href="#pokeTipo"><button class="novato">¿Qué es un Tipo de Pokémon?</button></a>
+            </div><br><br>
+            <div>
+                <img src="./images/pogo-8bit.jpg" class="novato">
             </div>
-        </li>
-        <li class="dropdown">
-            <a href="#" class="dropbtn">Menú Entrenador</a>
-            <div class="dropdown-content">
-                <a href="#">Pokédex</a>
-                <a href="#">Tipos</a>
+        </section>
+        <br><br><br><br>
+        <section id="pokemon" class="pokePag">
+            <br>
+            <div class="container">
+                <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
+                <a href="#pokedex"><button class="novato">¿Qué es Pokédex?</button></a>
+                <a href="#pokeTipo"><button class="novato">¿Qué es un Tipo de Pokémon?</button></a>
+            </div><br>
+            <div>
+                <p class="definition">Son criaturas diversas, que las puedes encontrar en un medio salvaje o junto a los seres humanos. <br> Las personas que atrapan a los Pokémon (denominados “Entrenadores”) los crían y los cuidan. <br> En el recorrido los Pokémon crecen
+                    y tienen más experiencia, algunos llegan a evolucionar y ser más fuertes. <br> Existen 151 en la región de Kanto ¡te invitamos a conocerlos con nuestra guía!</p>
+                <img src="./images/pikachu.png" class="pikaimg">
             </div>
-        </li>
+        </section>
+        <br><br><br><br><br><br><br>
+        <section id="pokedex" class="pokePag">
+            <br>
+            <div class="container">
+                <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
+                <a href="#pokedex"><button class="novato">¿Qué es Pokédex?</button></a>
+                <a href="#pokeTipo"><button class="novato">¿Qué es un Tipo de Pokémon?</button></a>
+            </div><br>
+            <div>
+                <p class="definition">La Pokédex es un artefacto que recolecta información sobre los Pokémon, <br> se identifican con una imagen y su número identificador. Cuando consigues a uno puedes consultar la Pokédex seleccionando la imagen del Pokémon para conocer toda
+                    su información, <br> sus tipos, ataques, fortalezas, peso, altura, etc... <br> Es un instrumento indispensable que entrega información detallada de cada uno de ellos.
+                </p>
+                <img src="./images/Pokedex1.png" class="pokeimg">
+            </div>
+        </section>
+        <br><br><br><br>
+        <section id="pokeTipo" class="pokePag">
+            <br>
+            <div class="container">
+                <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
+                <a href="#pokedex"><button class="novato">¿Qué es Pokédex?</button></a>
+                <a href="#pokeTipo"><button class="novato">¿Qué es un Tipo de Pokémon?</button></a>
+            </div><br>
+            <div>
+                <p class="definition">Los tipos son elementales, simplemente tipos, son atributos asociados a los Pokémon y los ataques que les dan ventajas o desventajas sobre otros. <br> En la Región de Kanto encontramos 16 tipos en total. <br> Cada Pokémon puede tener uno
+                    o dos tipos. <br> Cuando solo tiene uno, se les llama Pokémon de tipo puro, cuando tiene dos el primero se le llama tipo primario y al otro tipo secundario. <br> Los ataques, por otro lado, solo pueden tener un tipo.
+                </p>
+                <br><br><br><br><br>
+                <img src="./images/Icon_Agua.png" class="typeimg">
+                <img src="./images/Icon_Bicho.png" class="typeimg">
+                <img src="./images/Icon_Eléctrico.png" class="typeimg">
+                <img src="./images/Icon_Fuego.png" class="typeimg">
+                <br><br><br><br><br>
+            </div>
 
-        <input type="text" id="formulario" class="form-control" placeholder="Buscar">
-        <button class="btn" id="lupa">Buscar</button>
+        </section>
+        <br>
+        <section id="entrenador"class="pokePag">
+            <br>
+            <h2 class="text">¡¡Eres todo un Entrenador Pokémon, aquí encontrarás toda la información que necesites de los Pokémon de la Región de Kanto, escoge tu tipo de búsqueda!!
+            </h2>
+            <br><br><br><br>
+            <div class="flex-position">
+                <a href="#pokedexKanto">
+                    <figure>
+                        <img src="./images/Pokedex1.png" class="pokedeximg" alt="Pokédex Kanto">
+                        <figcaption>Pokédex Kanto</figcaption>
+                    </figure>
+                </a>
 
-    </ul>
-    <div id="root"></div>
+                <a href="#pokeType">
+                    <figure>
+                        <img src="./images/PokeBallRed.png" class="pokeballimg" alt="Tipos de Pokémon">
+                        <figcaption>Tipos de Pokémon</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <br><br><br><br><br>
+        </section>
+
+        <section id="pokedexKanto" class="pokePag">
+            <h2>Pokédex Región Kanto</h2>
+
+            <li class="navfilter">
+                <a href="" class="dropfilter">Ordenar por</a>
+                <div class="filter-menu">
+                    <a href="">Nombre A-Z</a>
+                    <a href="">Nombre Z-A</a>
+                    <a href="">Número</a>
+                    <a href="">Tipos</a>
+                </div>
+                <div></div>
+                <div class="lookCard" id="lookCard">
+                    <div class="lookPoke" id="lookPoke"> 
+                    </div>
+                  </div>
+                  <div class="numberPoke" id="numberPoke"> 
+                </div>
+            </li>
+        </section>
+
+        <div id="root"></div>
+        <section id="pokeType">
+        </section>
+   <!--</div>--> 
     <script src="main.js" type="module"></script>
 
 </body>
