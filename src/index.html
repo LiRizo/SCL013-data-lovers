@@ -12,7 +12,9 @@
 <body>
     <div class="flex-container">
         <ul>
-            <li><img src="./images/Pokelovers.png"></li>
+
+            <li><img id="LogoP"src="./images/Pokelovers.png"></li>
+
             <li><a href="#index.html" id="#inicio">Inicio</a></li>
 
             <li class="dropdown">
@@ -24,38 +26,39 @@
                 </div>
             </li>
             <li class="dropdown">
-                <a href="#entrenador" class="dropbtn">Entrenador</a>
+
+                <a href="#" class="dropbtn">Entrenador</a>
                 <div class="dropdown-content">
-                    <a href="#">Pokédex</a>
+                    <a href="#"id="all" value="all">Pokédex</a>
                     <a href="#">Tipos</a>
                 </div>
             </li>
-            <div class="flex-search">
-                <input type="text" id="form" class="form-control" placeholder="Busca tu Pokémon">
-                <i class="fas fa-search" type="button" id="lupa"></i>
-            </div>
+
+            <input type="text" id="formulario" class="form-control" placeholder="Buscar">
+            <i class="fas fa-search" type="button" id="lupa"></i>
+
         </ul>
 
-        <img src="./images/PokebolaMarco.png" class="marco">
-        <img src="./images/PokebolaMarco.png" class="marcob">
+       <!-- <img src="./images/PokebolaMarco.png" class="marco">
+        <img src="./images/PokebolaMarco.png" class="marcob">-->
         <br>
-        <div id="root"></div>
-
-        <section id="bienvenida">
-            <h2 class="text">¡¡Bienvenido a PokéLovers, nuestra Guía Pokémon, queremos saber si eres un Jugador Novato o si ya eres un Entrenador Pokémon, escoge una categoría!!
-            </h2>
-            <div><img src="./images/pokemon-iniciales.gif" class="gif"></div>
-
+        <section id="origin">
+            <h1 class="text">¡¡Bienvenido a PokéLovers, nuestra Guía Pokémon, queremos saber si eres un Jugador Novato o si ya eres un Entrenador Pokémon, escoge una categoría!!</h1>
+            <!--<div><img src="./images/pokemon-iniciales.gif" class="gif"></div>-->
+ <div id="gifPoke"></div>
             <a href="#novato"><button class="boton">Jugador Novato</button></a>
             <a href="#entrenador"><button class="boton">Entrenador Pokémon</button></a>
         </section>
-        <br><br><br><br>
+       <!-- <br><br><br><br>
+
         <img src="./images/PokebolaMarco.png" class="marco">
         <img src="./images/PokebolaMarco.png" class="marcob">
         <br>
 
-        <br><br><br><br><br><br><br>
-        <section id="novato" class="flex-content">
+
+        <br><br><br><br><br><br><br>-->
+        <section id="novato" class="pokePag">
+
             <br>
             <div class="container">
                 <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
@@ -63,11 +66,13 @@
                 <a href="#pokeTipo"><button class="novato">¿Qué es un Tipo de Pokémon?</button></a>
             </div><br><br>
             <div>
-                <img src="./images/pogo-8bit-1097446_qt92.jpg" class="novato">
+
+                <img src="./images/pogo-8bit.jpg" class="novato">
             </div>
         </section>
         <br><br><br><br>
-        <section id="pokemon">
+        <section id="pokemon" class="pokePag">
+
             <br>
             <div class="container">
                 <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
@@ -81,7 +86,9 @@
             </div>
         </section>
         <br><br><br><br><br><br><br>
-        <section id="pokedex">
+
+        <section id="pokedex" class="pokePag">
+
             <br>
             <div class="container">
                 <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
@@ -95,8 +102,9 @@
                 <img src="./images/Pokedex1.png" class="pokeimg">
             </div>
         </section>
-        <br><br><br><br>
-        <section id="pokeTipo">
+        <br><br><br>
+        <section id="pokeTipo" class="pokePag">
+
             <br>
             <div class="container">
                 <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
@@ -108,16 +116,20 @@
                     o dos tipos. <br> Cuando solo tiene uno, se les llama Pokémon de tipo puro, cuando tiene dos el primero se le llama tipo primario y al otro tipo secundario. <br> Los ataques, por otro lado, solo pueden tener un tipo.
                 </p>
                 <br><br><br><br><br>
-                <img src="./images/Icon_Agua.png" class="typeimg">
-                <img src="./images/Icon_Bicho.png" class="typeimg">
-                <img src="./images/Icon_Eléctrico.png" class="typeimg">
-                <img src="./images/Icon_Fuego.png" class="typeimg">
+
+                <img src="./images/Type/Icon_Agua.png" class="typeimg">
+                <img src="./images/Type/Icon_Bicho.png" class="typeimg">
+                <img src="./images/Type/Icon_Eléctrico.png" class="typeimg">
+                <img src="./images/Type/Icon_Fuego.png" class="typeimg">
+
                 <br><br><br><br><br>
             </div>
 
         </section>
         <br>
-        <section id="entrenador">
+
+        <section id="entrenador"class="pokePag">
+
             <br>
             <h2 class="text">¡¡Eres todo un Entrenador Pokémon, aquí encontrarás toda la información que necesites de los Pokémon de la Región de Kanto, escoge tu tipo de búsqueda!!
             </h2>
@@ -140,7 +152,9 @@
             <br><br><br><br><br>
         </section>
 
-        <section id="pokedexKanto">
+
+        <section id="pokedexKanto" class="pokePag">
+
             <h2>Pokédex Región Kanto</h2>
 
             <li class="navfilter">
@@ -151,13 +165,22 @@
                     <a href="">Número</a>
                     <a href="">Tipos</a>
                 </div>
+
+                <div></div>
+                <div class="lookCard" id="lookCard">
+                    <div class="lookPoke" id="lookPoke"> 
+                    </div>
+                  </div>
+                  <div class="numberPoke" id="numberPoke"> 
+                </div>
             </li>
         </section>
 
+        <div id="root"></div>
         <section id="pokeType">
-
         </section>
-    </div>
+   <!--</div>--> 
+
     <script src="main.js" type="module"></script>
 
 </body>
