@@ -8,11 +8,13 @@ ul {
     background-image: linear-gradient(to right, rgba(212, 166, 14, 0.2), #ffca28);
     font-family: 'Roboto', sans-serif;
     border-radius: 3px;
+
 }
 
 #LogoP {
     width: 150px;
     height: 58px;
+
     margin-left: 10px;
     text-align: left;
     vertical-align: center;
@@ -110,4 +112,27 @@ background: url('images/pokemon-iniciales.gif');
 
 .pokePag {
     display: none;
+
+/*Buscador interno*/
+
+button.btn {
+    align-self: flex-end;
+    border-radius: 2px;
+}
+
+div.flex-search {
+    float: right;
+}
+
+input.form-control {
+    border-radius: 30px;
+    padding: 4px 6px;
+    margin-top: 20px;
+}
+
+#lupa {
+    float: right;
+    margin-top: 25px;
+    width: 30px;
+    height: 30px;
 }

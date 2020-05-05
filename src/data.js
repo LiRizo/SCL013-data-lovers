@@ -1,4 +1,3 @@
-
 export const allPoke = (dataInfo) => {
   const newPokeArray = [];
   for (let i = 0; i < dataInfo.length; i += 1) {
@@ -27,6 +26,7 @@ export const allPoke = (dataInfo) => {
 
 //Ordena pokemon por alfabeto A-Z
 export const orderDataAz = (dataInfo) => {
+
   const newPokeArray = [];
   for (let i = 0; i < dataInfo.length; i++) {
       newPokeArray.push(dataInfo[i]);

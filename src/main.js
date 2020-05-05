@@ -12,6 +12,7 @@ const card = document.getElementById("lookPoke");
 //console.log(formulario.value);
 //const texto = formulario.value
 //}
+
 //Búsqueda interna (header) 
 const form = document.querySelector('#form');
 const lupa = document.querySelector('#lupa');
@@ -19,8 +20,10 @@ const result = document.querySelector('#root');
 
 const search = () => {
     result.innerHTML = '';
+
     const text = form.value.toLowerCase();
     for (let pokeInfo of allPoke) {
+
         let name = pokeInfo.name.toLowerCase();
         if (name.indexOf(text) !== -1) {
             result.innerHTML += `
@@ -32,6 +35,7 @@ const search = () => {
         <div class="elemCard">Pokémon no encontrado</div>`
     }
 }
+
 lupa.addEventListener('click', search)
 //form.addEventListener('keyup', search)
 //lupa.addEventListener('click', buscar)
@@ -60,12 +64,15 @@ const orderPokeZa = orderDataZa(allPoke);
 
 //Muestra tarjetas de pokémon en pantalla
 function lookPokedex(dataInfo) {
+
     let cardDesign = "";
     for (let i = 0; i < dataInfo.length; i++) {
         cardDesign += `
         <div class="elemCard">
         <div id='pokemon${dataInfo[i].id}' class="card${dataInfo[i].type[0]}">
+
            <div class='pokeProperty'> 
+
                <h2>${dataInfo[i].name}</h2>
                <h3>${dataInfo[i].num}</h3>
                <img class="imgPokemon" src="${dataInfo[i].img}"/>
@@ -76,6 +83,7 @@ function lookPokedex(dataInfo) {
     }
     card.innerHTML = cardDesign;
 }
+
 lookPokedex(dataPokedex);
 //Boton del menu (pokédex)
 document.getElementById("all").addEventListener("click", all);
@@ -85,6 +93,7 @@ function all() {
     let lookPokedex = document.getElementById("pokedexKanto");
     lookPokedex.style.display = "block";
 }
+
 //Para ordenar alfabéticamente (a-z / z-a)
 //const menuPokedex = document.querySelector(".ordenarPokemon");
 //selectElement.addEventListener("change", (e) => {
@@ -95,6 +104,7 @@ if (resultado === "A-Z") {
 }
 if (resultado === "Z-A") {
     viewAllPokemon(orderPokeZa);
+
 } else if (resultado === "All") {
     //       viewAllPokemon(allPokeData);
 }
