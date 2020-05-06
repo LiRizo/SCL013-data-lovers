@@ -4,14 +4,6 @@ import { allPoke, orderDataAz, orderDataZa } from './data.js';
 //const cardPokedex = document.getElementById("lookNumberPokedex");
 const card = document.getElementById("lookPoke");
 //const card1 = document.getElementById("numberPoke");
-//Búsqueda interna (header) 
-//const formulario = document.querySelector('#formulario');
-//const lupa = document.querySelector('#lupa');
-
-//const buscar = () => {
-//console.log(formulario.value);
-//const texto = formulario.value
-//}
 
 //Búsqueda interna (header) 
 const form = document.querySelector('#form');
@@ -27,7 +19,7 @@ const search = () => {
         let name = pokeInfo.name.toLowerCase();
         if (name.indexOf(text) !== -1) {
             result.innerHTML += `
-            <div class= "elemCard">${allPokeInfo}</div>` //traer el array
+            <div class= "elemCard">${allPoke}</div>` //traer el array
         }
     }
     if (result.innerHTML === '') {
@@ -37,8 +29,8 @@ const search = () => {
 }
 
 lupa.addEventListener('click', search)
-//form.addEventListener('keyup', search)
-//lupa.addEventListener('click', buscar)
+    //form.addEventListener('keyup', search)
+    //lupa.addEventListener('click', buscar)
 
 /*imprimir pokeMarco no funciona ya que se debe hacer todo de un lado o si no no pesca :S
 //div
@@ -87,6 +79,7 @@ function lookPokedex(dataInfo) {
 lookPokedex(dataPokedex);
 //Boton del menu (pokédex)
 document.getElementById("all").addEventListener("click", all);
+
 function all() {
     let originActual = document.getElementById("origin");
     originActual.style.display = "none";
@@ -100,10 +93,10 @@ function all() {
 const resultado = '$ { e.target.value }';
 //console.log(resultado);
 if (resultado === "A-Z") {
-    viewAllPokemon(orderPokeAz);
+    lookPokedex(orderPokeAz);
 }
 if (resultado === "Z-A") {
-    viewAllPokemon(orderPokeZa);
+    lookPokedex(orderPokeZa);
 
 } else if (resultado === "All") {
     //       viewAllPokemon(allPokeData);
