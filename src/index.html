@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>PokeLovers</title>
+    <title>PokéLovers</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/dc9ad3619f.js" crossorigin="anonymous"></script>
@@ -15,20 +15,22 @@
     <div class="flex-container">
         <ul>
             <li><img id="LogoP" src="./images/Pokelovers.png"></li>
-            <li><a href="#index.html" id="#inicio">Inicio</a></li>
+            <li><a href="#origin" id="inicio">Inicio</a></li>
             <li class="dropdown">
                 <a href="#novato" class="dropbtn">Novato</a>
+                <!--Menu novato-->
                 <div class="dropdown-content">
-                    <a href="#pokemon">¿Qué es un Pokémon?</a>
-                    <a href="#pokedex">¿Qué es Pokédex?</a>
-                    <a href="#pokeTipo">¿Qué es un Tipo de Pokémon?</a>
+                    <a href="#queEsUnPokemon" id="queEsPokemon">¿Qué es un Pokémon?</a>
+                    <a href="#queEsUnPokedex" id="queEsPokedex">¿Qué es Pokédex?</a>
+                    <a href="#queEsUnTipoDePokemon" id="queEsTipoPokemon">¿Qué es un Tipo de Pokémon?</a>
                 </div>
             </li>
+            <!--Menu entrenador-->
             <li class="dropdown">
-                <a href="#" class="dropbtn">Entrenador</a>
+                <a href="#entrenador" class="dropbtn">Entrenador</a>
                 <div class="dropdown-content">
-                    <a href="#" id="all" value="all">Pokédex</a>
-                    <a href="#">Tipos</a>
+                    <a href="#pokedexKanto" id="allPokemonMenu">Pokédex</a>
+                    <a href="#typePokemon" id="typeMenu">Tipos</a>
                 </div>
             </li>
             <input type="text" id="formulario" class="form-control" placeholder="Buscar">
@@ -37,60 +39,44 @@
 
         <img src="./images/PokebolaMarco.png" class="marco">
         <img src="./images/PokebolaMarco.png" class="marcob">
+
         <section id="origin">
-            <h1 class="text">¡¡Bienvenido a PokéLovers, nuestra Guía Pokémon, queremos saber si eres un Jugador Novato o si ya eres un Entrenador Pokémon, escoge una categoría!!</h1>
-            <!--El gif esta en css-->
+            <h1 class="text">¡¡Bienvenido a la guía de PokéLovers!!</h1>
+            <h2>Queremos saber si eres un Jugador Novato o si ya eres un Entrenador Pokémon, para eso debes escoger una categoría</h2>
             <div id="gifPoke"></div>
+            <!--El gif esta en css-->
             <a href="#novato"><button id="buttonNovato" class="boton">Jugador Novato</button></a>
             <a href="#entrenador"><button id="buttonEntrenador" class="boton">Entrenador Pokémon</button></a>
         </section>
+
         <img src="./images/PokebolaMarco.png" class="marco">
         <img src="./images/PokebolaMarco.png" class="marcob">
 
         <section id="novato" class="pokePag">
             <div class="container">
-                <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
-                <a href="#pokedex"><button class="novato">¿Qué es Pokédex?</button></a>
-                <a href="#pokeTipo"><button class="novato">¿Qué es un Tipo de Pokémon?</button></a>
+                <a href="#queEsUnPokemon"><button id="buttonInfo" class="boton">¿Qué es un Pokémon?</button></a>
+                <a href="#queEsUnPokedex"><button id="buttonInfo" class="boton">¿Qué es Pokédex?</button></a>
+                <a href="#queEsUnTipoDePokemon"><button id="buttonInfo" class="boton">¿Qué es un Tipo de Pokémon?</button></a>
             </div>
-            <div>
+
+            <div class="respuestas">
                 <img src="./images/pogo-8bit.jpg" class="novato">
             </div>
-        </section>
 
-        <section id="pokemon" class="pokePag">
-            <div class="container">
-                <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
-                <a href="#pokedex"><button class="novato">¿Qué es Pokédex?</button></a>
-                <a href="#pokeTipo"><button class="novato">¿Qué es un Tipo de Pokémon?</button></a>
-            </div><br>
-            <div>
+            <div id="queEsUnPokemon" class="respuestas">
                 <p class="definition">Son criaturas diversas, que las puedes encontrar en un medio salvaje o junto a los seres humanos. <br> Las personas que atrapan a los Pokémon (denominados “Entrenadores”) los crían y los cuidan. <br> En el recorrido los Pokémon crecen
                     y tienen más experiencia, algunos llegan a evolucionar y ser más fuertes. <br> Existen 151 en la región de Kanto ¡te invitamos a conocerlos con nuestra guía!</p>
                 <img src="./images/pikachu.png" class="pikaimg">
             </div>
-        </section>
-        <section id="pokedex" class="pokePag">
-            <br>
-            <div class="container">
-                <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
-                <a href="#pokedex"><button class="novato">¿Qué es Pokédex?</button></a>
-                <a href="#pokeTipo"><button class="novato">¿Qué es un Tipo de Pokémon?</button></a>
-            </div><br>
-            <div>
+
+            <div id="queEsUnPokedex" class="respuestas">
                 <p class="definition">La Pokédex es un artefacto que recolecta información sobre los Pokémon, <br> se identifican con una imagen y su número identificador. Cuando consigues a uno puedes consultar la Pokédex seleccionando la imagen del Pokémon para conocer toda
                     su información, <br> sus tipos, ataques, fortalezas, peso, altura, etc... <br> Es un instrumento indispensable que entrega información detallada de cada uno de ellos.
                 </p>
                 <img src="./images/Pokedex1.png" class="pokeimg">
             </div>
-        </section>
-        <section id="pokeTipo" class="pokePag">
-            <div class="container">
-                <a href="#pokemon"><button class="novato">¿Qué es un Pokémon?</button></a>
-                <a href="#pokedex"><button class="novato">¿Qué es Pokédex?</button></a>
-                <a href="#pokeTipo"><button class="novato">¿Qué es un Tipo de Pokémon?</button></a>
-            </div><br>
-            <div>
+
+            <div id="queEsUnTipoDePokemon" class="respuestas">
                 <p class="definition">Los tipos son elementales, simplemente tipos, son atributos asociados a los Pokémon y los ataques que les dan ventajas o desventajas sobre otros. <br> En la Región de Kanto encontramos 16 tipos en total. <br> Cada Pokémon puede tener uno
                     o dos tipos. <br> Cuando solo tiene uno, se les llama Pokémon de tipo puro, cuando tiene dos el primero se le llama tipo primario y al otro tipo secundario. <br> Los ataques, por otro lado, solo pueden tener un tipo.
                 </p>
@@ -99,7 +85,12 @@
                 <img src="./images/Type/Icon_Eléctrico.png" class="typeimg">
                 <img src="./images/Type/Icon_Fuego.png" class="typeimg">
             </div>
+
+
+
         </section>
+
+
 
         <section id="entrenador" class="pokePag">
             <h2 class="text">¡¡Eres todo un Entrenador Pokémon, aquí encontrarás toda la información que necesites de los Pokémon de la Región de Kanto, escoge tu tipo de búsqueda!!
@@ -107,13 +98,13 @@
             <div class="flex-position">
                 <a href="#pokedexKanto">
                     <figure>
-                        <img src="./images/Pokedex1.png" class="pokedeximg" alt="Pokédex Kanto">
+                        <img src="./images/Pokedex1.png" id="allPokeBtn" class="pokedeximg" alt="Pokédex Kanto">
                         <figcaption>Pokédex Kanto</figcaption>
                     </figure>
                 </a>
-                <a href="#pokeType">
+                <a href="#typePokemon">
                     <figure>
-                        <img src="./images/PokeBallRed.png" class="pokeballimg" alt="Tipos de Pokémon">
+                        <img src="./images/PokeBallRed.png" id="typePokeBtn" class="pokeballimg" alt="Tipos de Pokémon">
                         <figcaption>Tipos de Pokémon</figcaption>
                     </figure>
                 </a>
@@ -122,7 +113,7 @@
 
         <section id="pokedexKanto" class="pokePag">
             <h2>Pokédex Región Kanto</h2>
-            <li class="navfilter">
+            <div class="navfilter">
                 <a href="" class="dropfilter">Ordenar por</a>
                 <div class="filter-menu">
                     <a href="">Nombre A-Z</a>
@@ -137,13 +128,90 @@
                 </div>
                 <div class="numberPoke" id="numberPoke">
                 </div>
-            </li>
+            </div>
+        </section>
+
+        <section id="typePokemon" class="pokePag">
+            <div id="contenedorType">
+                <h1>Tipos de Pokémon</h1>
+                <figure>
+                    <img src="./images/Type/TypeSteel.png" id="steel" class="tipychoose" alt="Type Steel">
+                    <figcaption>Acero</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeWater.png" id="water" class="tipychoose" alt="Type Water">
+                    <figcaption>Agua</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeBug.png" id="bug" class="tipychoose" alt="Type Bug">
+                    <figcaption>Bicho</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeDragon.png" id="dragon" class="tipychoose" alt="Type Dragon">
+                    <figcaption>Dragón</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeElectric.png" id="electric" class="tipychoose" alt="Type Electric">
+                    <figcaption>Eléctrico</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeGhost.png" id="ghost" class="tipychoose" alt="Type Ghost">
+                    <figcaption>Fantasma</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeFire.png" id="fire" class="tipychoose" alt="Type Fire">
+                    <figcaption>Fuego</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeFairy.png" id="fairy" class="tipychoose" alt="Type Fairy">
+                    <figcaption>Hada</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeIce.png" id="ice" class="tipychoose" alt="Type Ice">
+                    <figcaption>Hielo</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeFighting.png" id="fighting" class="tipychoose" alt="Pokédex Kanto">
+                    <figcaption>Lucha</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeNormal.png" id="normal" class="tipychoose" alt="Type Normal">
+                    <figcaption>Normal</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeGrass.png" id="grass" class="tipychoose" alt="Type Grass">
+                    <figcaption>Planta</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypePsichic.png" id="psichic" class="tipychoose" alt="Type Psichic">
+                    <figcaption>Psíquico</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeRock.png" id="rock" class="tipychoose" alt="Type Rock">
+                    <figcaption>Roca</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeGround.png" id="ground" class="tipychoose" alt="Type Ground">
+                    <figcaption>Tierra</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeDark.png" id="dark" class="tipychoose" alt="Type Dark">
+                    <figcaption>Oscuro</figcaption>
+                </figure>
+                <figure>
+                    <img src="./images/Type/TypeFlying.png" id="flying" class="tipychoose" alt="Type Flying">
+                    <figcaption>Volador</figcaption>
+                </figure>
+            </div>
+
         </section>
 
         <div id="root"></div>
         <section id="pokeType">
         </section>
 
+
+        <footer class="footer"> Copyright &copy; 2020 Constanza Brito - Linda Rizo para Laboratoria SCL-013</footer>
         <script src="main.js" type="module"></script>
 </body>
 

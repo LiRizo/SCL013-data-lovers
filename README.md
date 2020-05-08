@@ -39,6 +39,7 @@ Dentro de las consideraciones realizamos un sketch de diseño visualizando a gra
 ### Historias de usuario
 
 Historia 1:
+
 **Usuario Juzera:** No es jugadora Pokémon Go (Novata)
 
 **Necesita:** Conocer conceptos básicos (Pokémon, Pokédex, Tipo Pokémon)
@@ -51,6 +52,7 @@ Historia 1:
 
 
 Historia 2:
+
 **Usuario Ariana:** No es jugadora Pokémon Go (Novata)
 
 **Necesita:** Visualizar un menú en el encabezado de la página.
@@ -63,6 +65,7 @@ Historia 2:
 
 
 Historia 3:
+
 **Usuario Sebastián:** Jugador Pokémon Go.
 
 **Necesita:** Conocer debilidades y fortalezas, imagen de nostalgia (Pokébola 8bit, Pokémon para Game Boy)

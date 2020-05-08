@@ -91,6 +91,10 @@ input.form-control {
     height: 30px;
 }
 
+#origin {
+    display: flexbox;
+}
+
 
 /*Gif inicial*/
 
@@ -104,16 +108,11 @@ input.form-control {
 }
 
 h1 {
-    position: absolute;
-    width: 1029px;
-    height: 141px;
-    left: 253px;
-    top: 203px;
     font-family: Gill Sans MT;
     font-style: normal;
     font-weight: normal;
     font-size: 36px;
-    line-height: 42px;
+    text-align: center;
 }
 
 h2 {
@@ -127,39 +126,25 @@ button.boton {
     padding: 15px 25px 15px;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
     display: inline-block;
     min-width: 250px;
     min-height: 50px;
     justify-content: space-between;
     margin-left: 270px;
+    position: relative;
 }
 
-#buttonNovato {
+#buttonInfo {
     display: flex;
     flex-direction: row;
     padding: 10px;
-    position: absolute;
-    width: 351px;
-    height: 103px;
-    left: 298px;
-    top: 785px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 20px;
-    background-color: #ffca28;
+    width: 350px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
 }
 
-#buttonEntrenador {
-    display: flex;
-    flex-direction: row;
-    padding: 10px;
-    position: absolute;
-    width: 351px;
-    height: 103px;
-    left: 778px;
-    top: 785px;
-    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
-}
+
+/*MARCO POKÉBALL*/
 
 img.marco {
     max-width: 20px;
@@ -189,6 +174,15 @@ img.novato {
     display: flex;
     margin-left: 300px;
     align-content: center;
+}
+
+.respuestas {
+    position: absolute;
+    width: 925px;
+    height: 720px;
+    left: 435px;
+    top: 160px;
+    background: rgba(251, 210, 99, 0.5);
 }
 
 
@@ -274,6 +268,25 @@ figure:hover figcaption {
     justify-content: center;
 }
 
+.elemCard {
+    width: 180px;
+    text-align: center;
+    padding: 25px;
+    background: rgba(251, 249, 217, 0.85);
+    box-shadow: inset 0px 4px 3px #E5E5E5;
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+    margin: 40px;
+}
+
+.tipychoose {
+    width: 200px;
+    height: 200px;
+    padding: 25px 0;
+    border-radius: 6px;
+    margin: 40px;
+}
+
 
 /*Menú Filtro página Pokédex Kanto*/
 
@@ -342,4 +355,14 @@ li.dropfilter {
 
 .pokePag {
     display: none;
+}
+
+
+/*Footer*/
+
+.footer {
+    font-family: 'Roboto', sans-serif;
+    border-radius: 3px;
+    display: block;
+    justify-content: center;
 }
