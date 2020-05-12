@@ -49,12 +49,19 @@ Historia 1:
 **Criterios de aceptación:** 
 
 [X] Incluir en prototipo de Alta Fidelidad.
+
 [X] Diseño de página (HTML, JS, CSS)
+
 [X] Incuir secciones de información "Novato"
+
 [X] Agregar información ¿Qué es un Pokémon?
+
 [X] Agregar información ¿Qué es Pokédex? 
+
 [X] Agregar información ¿Qué es un tipo de Pokémon?
+
 [X] Subir cambios  Repositorio Git Hub.
+
 
 **Definición de Terminado:** Se cumple con agregar información requerida en orden a lo propuesto en diseño de alta fidelidad, con breve y clara explicación para mejor entendimiento de usuarios novatos.
 
@@ -70,10 +77,15 @@ Historia 2:
 **Criterios de aceptación:** 
 
 [X] Incluir en prototipo de Alta Fidelidad.
+
 [X] Diseño de página (HTML, JS, CSS)
+
 [X] Incluir menú para navegación en sección Header de la página.
+
 [X] Agregar Menú Desplegable (Novato y Entrendor)
+
 [X] Agregar buscaor interno (ubicado en header) 
+
 [X] Subir cambios  Repositorio Git Hub.
 
 **Definición de Terminado:** Se agrega menú en heather, incluye "Menú Novato" (preguntas) y "Menú Entrenador" (pokédex y tipos)
@@ -90,10 +102,15 @@ Historia 3:
 **Criterios de aceptación:** 
 
 [X] Incluir en prototipo de Alta Fidelidad.
+
 [X] Diseño de página (HTML, JS, CSS)
+
 [X] Incluir en diseño de página pokéball 8bit (marco)
+
 [X] Crear tarjeta con información de cada pokémon.
+
 [X] Agregar interacción, manejo de data, diseño y estilos.
+
 [X] Subir cambios  Repositorio Git Hub.
 
 **Definición de Terminado:** Se agrega información detallada anteriormente, se incluyen pokébola 8bit como marco en esquinas de la página, se reordena imagen en ficha pokémon y, además se agrega cantidad de caramelos para evolucionar, información distribuida de forma más clara.
@@ -105,13 +122,13 @@ Historia 3:
 
 Dentro de los inicios de nuestro proyecto realizamos el diseño (sketch) del prototipo básico, el cual mostramos a continuación.
 
-<img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/sketch.jpeg" width= 700px height= 600px>
+<img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/sketch.jpeg" width= 900px height= 600px>
 
 Al momento de realizar iteraciones con posibles usuarios realizamos el prototipo de baja fidelidad en el programa InVision, con el cual realizamos testeo en usuarios quienes nos proporcionaron información para mejorar este diseño y del cual pudimos obtener nuestras primeras Historias de Usuario.
 
 [Prototipo de Baja Fidelidad](https://www.loom.com/share/993af3c624d14d22a3b266d1fb6b85d5) (link testeo loom)
 
-<img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/PrototipoCompleto.JPG" width= 700px height= 600px>
+<img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/PrototipoCompleto.JPG" width= 900px height= 600px>
 
 #### Prototipo de alta fidelidad
 
@@ -119,11 +136,11 @@ Al obtener los feedbacks necesarios nos propusimos realizar los cambios sugerido
 
 [Prototipo de Alta Fidelidad](https://www.loom.com/share/431f892a79a04b3a89417547e205f83e) (link testeo loom)
 
-<img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/FigmaCompleto.JPG" width= 700px height= 600px>
+<img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/FigmaCompleto.JPG" width= 900px height= 600px>
 
 En este diseño trabajamos con una tipografía simple 'Roboto; sans-serif' y 'Gill Sans MT'.   Además tratamos de utilizar una paleta de colores simple y en relación con la temática, la cual mostramos a continuación.
 
-<img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/ColoresPagPokemon-02.png" width= 600px height= 400px>
+<img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/ColoresPagPokemon-02.png" width= 700px height= 500px>
 
 
 ## 3. Definición del Usuario
@@ -185,7 +202,7 @@ las siguientes preguntas para así ayudarnos a relizar los futuros diseños (baj
 
   [Pokemon Lovers Trello](https://trello.com/invite/b/zTYsOkCi/7c2c35a10fca7106b9cad0b3ba7708f4/pokemon-lovers) (link tablero)
 
-  <img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/Trello PokemonLovers.JPG" width= 700px height= 600px>
+  <img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/Trello PokemonLovers.JPG" width= 900px height= 600px>
 
 ***
 
