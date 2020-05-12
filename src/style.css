@@ -99,7 +99,8 @@ input.form-control {
 /*Gif inicial*/
 
 #gifPoke {
-    position: absolute;
+    position: center;
+    align-items: center;
     width: 500px;
     height: 352px;
     left: 470px;
@@ -137,10 +138,20 @@ button.boton {
 
 #buttonInfo {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding: 10px;
     width: 350px;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
+}
+
+.container {
+    position: relative;
+}
+
+.respuestas {
+    position: relative;
+    display: none;
 }
 
 
@@ -157,6 +168,7 @@ img.marcob {
     max-width: 20px;
     max-height: 20px;
     margin-top: 5px;
+    margin-bottom: 10px;
     float: right;
 }
 
@@ -269,22 +281,25 @@ figure:hover figcaption {
 }
 
 .elemCard {
-    width: 180px;
+    width: 150px;
     text-align: center;
     padding: 25px;
     background: rgba(251, 249, 217, 0.85);
     box-shadow: inset 0px 4px 3px #E5E5E5;
     border-radius: 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
-    margin: 40px;
+    margin: 20px;
 }
 
 .tipychoose {
-    width: 200px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     padding: 25px 0;
     border-radius: 6px;
-    margin: 40px;
+    margin: 25px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: auto;
 }
 
 
@@ -347,6 +362,31 @@ li.dropfilter {
 }
 
 
+/*Filtros Pokédex*/
+
+.heather {
+    flex-direction: row;
+    justify-content: center;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
+    flex-direction: row;
+    padding: 5px;
+    font-size: 16px;
+}
+
+.navegationMenu {
+    font-family: 'Roboto', sans-serif;
+    flex-direction: row;
+    vertical-align: center;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 170px;
+}
+
+
 /*Vista de pag*/
 
 #origin {
@@ -365,4 +405,9 @@ li.dropfilter {
     border-radius: 3px;
     display: block;
     justify-content: center;
+    margin: 0;
+    background-color: antiquewhite;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
 }

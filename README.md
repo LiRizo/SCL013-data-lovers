@@ -46,9 +46,17 @@ Historia 1:
 
 **Para:** Poder entender de mejor manera la app web presentada.
 
-**Criterios de aceptación:** Agregar información sobre ¿Qué es un Pokémon?, ¿Qué es Pokédex? y ¿Qué es un tipo de Pokémon? para usuarios novatos con quienes se testeó el prototipo de baja fidelidad.
+**Criterios de aceptación:** 
 
-**Definición de Terminado:** Se agrega preguntas detalladas anteriormente, con breve y clara explicación para mejor entendimiento de usuarios novatos.
+[X] Incluir en prototipo de Alta Fidelidad.
+[X] Diseño de página (HTML, JS, CSS)
+[X] Incuir secciones de información "Novato"
+[X] Agregar información ¿Qué es un Pokémon?
+[X] Agregar información ¿Qué es Pokédex? 
+[X] Agregar información ¿Qué es un tipo de Pokémon?
+[X] Subir cambios  Repositorio Git Hub.
+
+**Definición de Terminado:** Se cumple con agregar información requerida en orden a lo propuesto en diseño de alta fidelidad, con breve y clara explicación para mejor entendimiento de usuarios novatos.
 
 
 Historia 2:
@@ -59,7 +67,14 @@ Historia 2:
 
 **Para:** Poder moverse libremente dentro de la app web.
 
-**Criterios de aceptación:** Agregar menú superior (heather) con información sobre las páginas y ubicación para facilitar el acceso.
+**Criterios de aceptación:** 
+
+[X] Incluir en prototipo de Alta Fidelidad.
+[X] Diseño de página (HTML, JS, CSS)
+[X] Incluir menú para navegación en sección Header de la página.
+[X] Agregar Menú Desplegable (Novato y Entrendor)
+[X] Agregar buscaor interno (ubicado en header) 
+[X] Subir cambios  Repositorio Git Hub.
 
 **Definición de Terminado:** Se agrega menú en heather, incluye "Menú Novato" (preguntas) y "Menú Entrenador" (pokédex y tipos)
 
@@ -68,13 +83,20 @@ Historia 3:
 
 **Usuario Sebastián:** Jugador Pokémon Go.
 
-**Necesita:** Conocer debilidades y fortalezas, imagen de nostalgia (Pokébola 8bit, Pokémon para Game Boy)
+**Necesita:** Conocer debilidades, imagen de nostalgia (Pokébola 8bit, Pokémon para Game Boy)
 
 **Para:** Obtener mayor información sobre sus Pokémon para la batalla en Gimnasios, contra otros Entrenadores e Incursiones.
 
-**Criterios de aceptación:** Agregar información sobre Fortalezas (Debilidades se encontraban en sketch)
+**Criterios de aceptación:** 
 
-**Definición de Terminado:** Se agrega información detallada anteriormente, se incluyen pokébola 8bit como marco en esquinas de la página, se reordena imagen en ficha pokémon y se incluye Fortalezas, además se agrega cantidad de caramelos para evolucionar, información distribuida de forma más clara.
+[X] Incluir en prototipo de Alta Fidelidad.
+[X] Diseño de página (HTML, JS, CSS)
+[X] Incluir en diseño de página pokéball 8bit (marco)
+[X] Crear tarjeta con información de cada pokémon.
+[X] Agregar interacción, manejo de data, diseño y estilos.
+[X] Subir cambios  Repositorio Git Hub.
+
+**Definición de Terminado:** Se agrega información detallada anteriormente, se incluyen pokébola 8bit como marco en esquinas de la página, se reordena imagen en ficha pokémon y, además se agrega cantidad de caramelos para evolucionar, información distribuida de forma más clara.
 
 
 ### Diseño de la Interfaz de Usuario
@@ -99,9 +121,9 @@ Al obtener los feedbacks necesarios nos propusimos realizar los cambios sugerido
 
 <img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/FigmaCompleto.JPG" width= 700px height= 600px>
 
-En este diseño tratamos de utilizar una paleta de colores simple y en relación con la temática, la cual mostramos a continuación.
+En este diseño trabajamos con una tipografía simple 'Roboto; sans-serif' y 'Gill Sans MT'.   Además tratamos de utilizar una paleta de colores simple y en relación con la temática, la cual mostramos a continuación.
 
-<img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/ColoresPagPokemon-02.png" width= 700px height= 600px>
+<img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/ColoresPagPokemon-02.png" width= 600px height= 400px>
 
 
 ## 3. Definición del Usuario
@@ -151,24 +173,19 @@ las siguientes preguntas para así ayudarnos a relizar los futuros diseños (baj
   
   *[Entrevista Usuario Rebeca](https://drive.google.com/open?id=1QRDltAQOceXEpPFThowXYb-KXj0wLuWQ)
 
+  *[Entrevista Usuario Sebastián](https://photos.google.com/share/AF1QipNpDwD2EkWVBbRwtJtmQDuFUyiuxveNwWkO1ESchBmcTVeUdQuGjSYAueuXjqFYQQ/photo/AF1QipPfhVYWf0H9_F9ICbL-kQvoX-swKRNtVjg4fmo0?key=SVVZM2RBYW9JamVPcVhZSG82UXBPbHNVZk5TeThR)
 
-### Implementación de la Interfaz de Usuario (HTML/CSS/JS)
 
-### Pruebas unitarias
+***
 
-Te recomendamos que este archivo contenga toda la funcionalidad que corresponda
-a obtener, procesar y manipular datos (tus funciones). Por ejemplo:
+#### Planificación
 
-* `filterData(data, condition)`: esta función `filter` o filtrar recibiría la
-  data, y nos retornaría aquellos datos que sí cumplan con la condición.
+  En nestro proyecto definimos la utilización del tablero Trello para mayor organización en interacción 
+  de las tareas a realizar, se adjunta imagen y link del mismo.
 
-* `sortData(data, sortBy, sortOrder)`: esta función `sort` u ordenar
-  recibe tres parámetros.
-  El primer parámetro, `data`, nos entrega los datos.
-  El segundo parámetro, `sortBy`, nos dice con respecto a cuál de los campos de
-  la data se quiere ordenar.
-  El tercer parámetro, `sortOrder`, indica si se quiere ordenar de manera
-  ascendente o descendente.
+  [Pokemon Lovers Trello](https://trello.com/invite/b/zTYsOkCi/7c2c35a10fca7106b9cad0b3ba7708f4/pokemon-lovers) (link tablero)
+
+  <img src="https://github.com/ConnieBrito/SCL013-data-lovers/blob/master/src/images/Trello PokemonLovers.JPG" width= 700px height= 600px>
 
 ***
 

@@ -1,61 +1,28 @@
 import pokeData from './data/pokemon/pokemon.js';
-import { allPoke, orderDataAz, orderDataZa } from './data.js';
+import { allPoke, orderDataAz, orderDataZa, orderDataNumDes, filterPokeTypeSteel, weaknessFilter, searchPokemon } from './data.js';
 
-//const cardPokedex = document.getElementById("lookNumberPokedex");
+//Búsqueda interna (header) 
+
+const lupa = document.getElementById("lupa");
+lupa.addEventListener('keydown', function() {
+    if (event.which === 15 || event.keycode === 15 || event.key === "Enter") {
+        event.preventDefault();
+        const busqueda = lupa.value;
+        const namePokemon = busqueda.charAt(0).toUpperCase() + busqueda.slice(1).toLowerCase();
+        let pickPokemon = searchPokemon(dataPokedex, namePokemon);
+        lookPokedex(pickPokemon);
+    }
+});
+
+
 const card = document.getElementById("lookPoke");
-//const card1 = document.getElementById("numberPoke");
-//Búsqueda interna (header) 
-//const formulario = document.querySelector('#formulario');
-//const lupa = document.querySelector('#lupa');
-
-//const buscar = () => {
-//console.log(formulario.value);
-//const texto = formulario.value
-//}
-//Búsqueda interna (header) 
-const form = document.querySelector('#form');
-const lupa = document.querySelector('#lupa');
-const result = document.querySelector('#root');
-
-const search = () => {
-    result.innerHTML = '';
-    const text = form.value.toLowerCase();
-    for (let pokeInfo of allPoke) {
-        let name = pokeInfo.name.toLowerCase();
-        if (name.indexOf(text) !== -1) {
-            result.innerHTML += lookPokedex; //traer el array
-        }
-    }
-    if (result.innerHTML === '') {
-        result.innerHTML += `
-        <div class="elemCard">Pokémon no encontrado</div>`
-    }
-}
-lupa.addEventListener('click', search)
-form.addEventListener('keyup', search)
-
-
-/*imprimir pokeMarco no funciona ya que se debe hacer todo de un lado o si no no pesca :S
-//div
-const fondo = document.createElement("div");
-const marco = document.createElement("img");
-
-fondo.classList.add = "img-box";
-marco.classList.add = "img-box-image";
-marco.src =  '<img id="marco1" src="./images/PokebolaMarco.png"/>';
-
-document.getElementById("origin").innerHTML = fondo.appendChild(marco);*/
-
-
-/*Imprimir imagen gif inicial
-document.getElementById("origin").innerHTML = '<img id="gif" src="./images/pokemon-iniciales.gif"/>';*/
-//crearElement('div', 'origin', 'gifPoke');
-//crearElement('IMG', "gif", "origin", '', '', "./images/pokemon-iniciales.gif");
 
 //Arreglo para llamar a la data de pokémon
 const dataPokedex = allPoke(pokeData.pokemon);
 const orderPokeAz = orderDataAz(allPoke);
 const orderPokeZa = orderDataZa(allPoke);
+const orderPokeNumDes = orderDataNumDes(allPoke);
+
 
 //Muestra tarjetas de pokémon en pantalla
 function lookPokedex(dataInfo) {
@@ -77,39 +44,47 @@ function lookPokedex(dataInfo) {
 }
 lookPokedex(dataPokedex);
 
+lookPokedex(dataPokedex);
+
+
 //Para ordenar alfabéticamente (a-z / z-a)
-//const menuPokedex = document.querySelector(".ordenarPokemon");
-//selectElement.addEventListener("change", (e) => {
-const resultado = '$ { e.target.value }';
-//console.log(resultado);
-if (resultado === "A-Z") {
-    lookPokedex(orderPokeAz);
-}
-if (resultado === "Z-A") {
-    lookPokedex(orderPokeZa);
-} else if (resultado === "All") {
-    //       viewAllPokemon(allPokeData);
-}
-//    return menuPokedex;
-//});
+const menuPokedex = document.querySelector("#order");
+menuPokedex.addEventListener("change", () => {
+    const resultado = '$ {event.target.value}';
+    if (resultado === "A-Z") {
+        lookPokedex(orderPokeAz);
+    }
+    if (resultado === "Z-A") {
+        lookPokedex(orderPokeZa);
+    }
+    if (resultado === "9-0") {
+        lookPokedex(orderPokeNumDes);
+    } else if (resultado === "0-9") {
+        lookPokedex(dataPokedex);
+    }
+});
 
-//Boton del menu (Novato)
-document.getElementById("queEsPokemon").addEventListener("click", queEsPokemon);
+//Para filtrar por debilidad (eliminamos tipo "Normal" por no ser debilidad de ningún pokémon)
+const selectorPokeWeakness = document.querySelector("#weakness");
+selectorPokeWeakness.addEventListener("change", () => {
+    let pokemonWeakness = selectorPokeWeakness.value;
+    if (pokemonWeakness === "weakness") {
+        lookPokedex(dataPokedex);
+    } else {
+        let result = weaknessFilter(dataPokedex, pokemonWeakness);
+        lookPokedex(result);
+    }
+});
 
-function queEsPokemon() {
-    let originActual = document.getElementById("origin");
-    originActual.style.display = "none";
-    let lookPokedex = document.getElementById("queEsUnPokemon");
-    lookPokedex.style.display = "block";
-}
-document.getElementById("queEsPokedex").addEventListener("click", queEsPokedex);
-
-function queEsPokedex() {
-    let originActual = document.getElementById("origin");
-    originActual.style.display = "none";
-    let lookType = document.getElementById("queEsUnPokedex");
-    lookType.style.display = "block";
-}
+//Filtrar por tipo
+const selectorPokeTypeSteel = document.querySelector("#pokeType");
+selectorPokeTypeSteel.addEventListener('click', () => {
+    let pokemonType = selectorPokeTypeSteel.value;
+    if (pokemonType === "Steel") {
+        let result = filterPokeTypeSteel(dataPokedex, pokemonType);
+        lookPokedex(result);
+    }
+});
 
 //Boton del menu (Entrenador)
 document.getElementById("allPokemonMenu").addEventListener("click", allPokemonMenu);
@@ -129,7 +104,8 @@ function typeMenu() {
     lookType.style.display = "block";
 }
 //Parte de los botones 
-//Novato
+//Muestra sección Novato
+
 document.getElementById("buttonNovato").addEventListener("click", buttonNovato);
 
 function buttonNovato() {
@@ -138,6 +114,17 @@ function buttonNovato() {
     let lookNovato = document.getElementById("novato");
     lookNovato.style.display = "block";
 }
+
+let mostrarNovato = () => {
+    document.getElementById("origin").style.display = "none";
+    document.getElementById("queEsUnPokemon").style.display = "";
+    document.getElementById("queEsUnPokedex").style.display = "";
+    document.getElementById("queEsUnTipoDePokemon").style.display = "";
+};
+document.getElementById("buttonNovato").addEventListener("click", mostrarNovato);
+
+
+//Muestra sección Entrenador
 document.getElementById("buttonEntrenador").addEventListener("click", buttonEntrenador);
 
 function buttonEntrenador() {
@@ -146,6 +133,8 @@ function buttonEntrenador() {
     let lookEntrenador = document.getElementById("entrenador");
     lookEntrenador.style.display = "block";
 }
+
+//Muestra sección Tipos de Pokémon
 document.getElementById("typePokeBtn").addEventListener("click", typePokeBtn);
 
 function typePokeBtn() {
@@ -154,6 +143,7 @@ function typePokeBtn() {
     let lookTypePokemon = document.getElementById("typePokemon");
     lookTypePokemon.style.display = "block";
 }
+//Muestra sección Pokédex Kanto
 document.getElementById("allPokeBtn").addEventListener("click", allPokeBtn);
 
 function allPokeBtn() {
