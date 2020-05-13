@@ -71,6 +71,22 @@ li.dropdown {
     display: block;
 }
 
+#btnMenuResponsive {
+    display: none;
+}
+
+header label {
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+}
+
+header label:hover {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+}
+
 
 /*Buscador interno*/
 
@@ -363,6 +379,31 @@ li.dropfilter {
 }
 
 
+/*filtros de menu*/
+
+.filters {
+    /*borde filtros*/
+    margin: 0 2rem 1.5rem 0;
+    border-radius: 1.8em;
+    display: inline-block;
+    overflow: hidden;
+    width: 10rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.filter {
+    width: 80%;
+    height: 2.3em;
+    border: 0em;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+}
+
+
 /*Filtros Pokédex*/
 
 .heather {
@@ -388,6 +429,84 @@ label {
 }
 
 
+/*Parte modal*/
+
+#creators {
+    background: rgb(0, 0, 0, .7);
+    border-radius: 10px;
+    height: 40px;
+    text-align: center;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-size: 7px;
+    line-height: 20px;
+    color: #D8D2D2;
+}
+
+.modal {
+    position: fixed;
+    /*Se queda en el lugar fijo*/
+    z-index: 1;
+    /*Trae el modal al frente*/
+    padding-top: 160px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /*Se habilita el scroll si es necesario*/
+}
+
+.modalContent {
+    background: rgba(251, 210, 99, 0.945);
+    margin: auto;
+    padding: 10px;
+    border-radius: 10px;
+    border: 3px solid #FCB12B;
+    width: 50%;
+    height: 480px;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.modalCharacters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cardElem2 {
+    width: 160px;
+    text-align: center;
+    background: rgba(251, 249, 217, 0.85);
+    border-radius: 5px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+.characterInformation {
+    padding: 0px 0px 0px 30px;
+    text-align: center;
+    color: #000;
+}
+
+.characterInformation2 {
+    padding: 5px 30px 30px 70px;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000;
+}
+
+
 /*Vista de pag*/
 
 #origin {
@@ -395,6 +514,10 @@ label {
 }
 
 .pokePag {
+    display: none;
+}
+
+#modalContent {
     display: none;
 }
 
@@ -416,4 +539,26 @@ label {
     text-align: center;
     padding: 20px;
     margin-top: 30px;
+}
+
+
+/*Responsive Tablet*/
+
+@media (max-width: 768px) {
+    header label {
+        display: block;
+    }
+    ul {
+        position: absolute;
+        background: #facd52;
+        width: 40%;
+        margin-left: -40%;
+        transition: all 0.5s;
+    }
+    li {
+        flex-direction: column;
+    }
+    #btnMenuResponsive:checked~ul {
+        margin: 0;
+    }
 }

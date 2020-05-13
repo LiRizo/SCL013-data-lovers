@@ -80,27 +80,3 @@ export const filterPokemonType = (dataInfo, pokeTipo) => {
     }
     return newDataArray.filter(pokemon => pokemon.type.includes(pokeTipo));
 };
-
-/*export const filterPokeTypeWater = (dataInfo, Water) => {
-    const newPokeArray = [];
-    for (let i = 0; i < dataInfo.length; i += 1) {
-        newPokeArray.push(dataInfo[i]);
-    }
-    return newPokeArray.filter(pokemon => pokemon.type.includes(Water));
-};
-
-export const filterPokeTypeSteel = (dataInfo, Steel) => {
-    const newPokeArray = [];
-    for (let i = 0; i < dataInfo.length; i += 1) {
-        newPokeArray.push(dataInfo[i]);
-    }
-    return newPokeArray.filter(pokemon => pokemon.type.includes(Steel));
-};*/
-
-//Filtro por tipo de Pokémon
-
-/*const filterSteel = allPoke.filter(typeF => {
-    let typeSteel = typeF.type.includes('steel')
-    typeSteel != ""
-    return filterSteel;
-})*/
