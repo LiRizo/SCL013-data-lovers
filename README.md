@@ -20,9 +20,18 @@ necesitan.
 En esta ocasión decidimos trabajar con: 
 
 * [Pokémon]:
-  En este set trabajamos con los 151 Pokémon de la región de Kanto, mostrando de la forma que analizamos mejor para nuestros usuarios del juego
+  En este set trabajamos con los 151 Pokémon de la región de Kanto, mostrando de la forma que analizamos mejor para nuestros usuarios del juego.
   [Pokémon GO](http://pokemongolive.com).
 
+  Nota: Debido a que la data se encuentra obtenida de la Primera Generación de Pokémon de la Región de Kanto,
+  en los filtros de Tipo y Debilidades habrá algunos cambios.
+  Dentro del filtro "Tipo" en las selecciones de "Acero" y "Hada" no aarecerá información porque estos tipos aparecieron recién con la Generación posterior.  Asimismo, en el filtro "Debilidades" omitimos la opción "Normal" ya que este tipo no representa ningún daño a los otros tipos de Pokémon.
+
+### Demo del Proyecto
+
+  Invitamos a nuestros usuarios a ingresar al siguiente link que los llevará a disfrutar la experiencia de "PokéLovers"
+
+  [PokéLovers](link del deploy) *pendiente* 
 
 ## 2. Criterios del proyecto
 
@@ -197,7 +206,7 @@ las siguientes preguntas para así ayudarnos a relizar los futuros diseños (baj
 
 #### Planificación
 
-  En nestro proyecto definimos la utilización del tablero Trello para mayor organización en interacción 
+  En nuestro proyecto definimos la utilización del tablero Trello para mayor organización en interacción 
   de las tareas a realizar, se adjunta imagen y link del mismo.
 
   [Pokemon Lovers Trello](https://trello.com/invite/b/zTYsOkCi/7c2c35a10fca7106b9cad0b3ba7708f4/pokemon-lovers) (link tablero)

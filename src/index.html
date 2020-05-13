@@ -33,8 +33,9 @@
                     <a href="#typePokemon" id="typeMenu">Tipos</a>
                 </div>
             </li>
-            <input type="text" id="formulario" class="form-control" placeholder="Busca tu pokémon">
-            <i class="fas fa-search" type="button" id="lupa"></i>
+            <div class="flex-search">
+                <input type="text" id="formulario" class="form-control" placeholder="Busca tu Pokémon">
+                <i class="fas fa-search" type="button" id="lupa"></i></div>
         </ul>
 
         <img src="./images/PokebolaMarco.png" class="marco">
@@ -48,15 +49,19 @@
             <a href="#novato"><button id="buttonNovato" class="boton">Jugador Novato</button></a>
             <a href="#entrenador"><button id="buttonEntrenador" class="boton">Entrenador Pokémon</button></a>
         </section>
-
+        <br>
+        <div>
+            <p class="note">Nota: La información contenida dentro de esta web está basada en la Primera Generación de Pokémon de la Región de Kanto.</p>
+        </div>
+        <br>
         <img src="./images/PokebolaMarco.png" class="marco">
         <img src="./images/PokebolaMarco.png" class="marcob">
 
         <section id="novato" class="pokePag">
             <div class="container">
-                <a href="#queEsUnPokemon"><button onclick="changeAnswerPokemon()" id="buttonInfoPokemon" class="boton">¿Qué es un Pokémon?</buttonnclick=></a>
-                <a href="#queEsUnPokedex"><button changeAnswerPokedex() id="buttonInfoPokedex" class="boton">¿Qué es Pokédex?</button></a>
-                <a href="#queEsUnTipoDePokemon"><button changeAnswerTipo() id="buttonInfoTipo" class="boton">¿Qué es un Tipo de Pokémon?</button></a>
+                <a href="#queEsUnPokemon"><button id="buttonInfo" class="boton">¿Qué es un Pokémon?</buttonnclick=></a>
+                <a href="#queEsUnPokedex"><button id="buttonInfo" class="boton">¿Qué es Pokédex?</button></a>
+                <a href="#queEsUnTipoDePokemon"><button id="buttonInfo" class="boton">¿Qué es un Tipo de Pokémon?</button></a>
             </div>
 
             <div class="respuestas">
@@ -113,18 +118,19 @@
                 <nav class="flex-menu navegationBar">
                     <div class="flex-element">
                         <label for="order">Orden: </label>
-                        <select class="navegationMenu" id="order">
+                        <select class="navegationMenu" id="orderMenu">
+                    <option value="All">Todos</option>
+                    <option value="az">A - Z</option>
+                    <option value="za">Z - A</option>
                     <option value="0-9">#001 - #151</option>
                     <option value="9-0">#151 - #001</option>
-                    <option value="AZ">A - Z</option>
-                    <option value="ZA">Z - A</option>
                   </select>
                     </div>
 
                     <div class="flex-element">
                         <label for="weakness">Debilidades: </label>
                         <select class="navegationMenu" id="weakness">
-                      <option value="">Todas</option>
+                      <option value="weakness">Todas</option>
                       <option value="Steel">Acero</option>
                       <option value="Water">Agua</option>
                       <option value="Bug">Bicho</option>
@@ -135,6 +141,31 @@
                       <option value="Fairy">Hada</option>
                       <option value="Ice">Hielo</option>
                       <option value="Fighting">Lucha</option>
+                      <option value="Grass">Planta</option>
+                      <option value="Psychic">Psíquico</option>
+                      <option value="Rock"> Roca</option>
+                      <option value="Ground">Tierra</option>
+                      <option value="Sinister">Oscuro</option>             
+                      <option value="Poison">Veneno</option>                  
+                      <option value="Flying">Volador</option>
+                  </select>
+                    </div>
+
+                    <div class="flex-element">
+                        <label for="types">Tipos: </label>
+                        <select class="navegationMenu" id="pokemonTypes">
+                      <option value="allType">Todos</option>
+                      <option value="Steel">Acero</option>
+                      <option value="Water">Agua</option>
+                      <option value="Bug">Bicho</option>
+                      <option value="Dragon">Dragón</option>
+                      <option value="Electric">Eléctrico</option>
+                      <option value="Ghost">Fantasma</option>
+                      <option value="Fire">Fuego</option>
+                      <option value="Fairy">Hada</option>
+                      <option value="Ice">Hielo</option>
+                      <option value="Fighting">Lucha</option>
+                      <option value="Normal">Normal</option>
                       <option value="Grass">Planta</option>
                       <option value="Psychic">Psíquico</option>
                       <option value="Rock"> Roca</option>
@@ -164,109 +195,109 @@
     <section id="typePokemon" class="pokePag">
         <div id="contenedorType">
             <h1>Tipos de Pokémon</h1>
-            <a href="#pokeType">
+            <a href="#pokeTypeSteel">
                 <figure>
-                    <input type="image" src="./images/Type/TypeSteel.png" name="btnsteel" id="steel" class="tipychoose" alt="Type Steel">
+                    <input type="image" src="./images/Type/TypeSteel.png" id="steel" class="tipychoose" alt="Type Steel">
                     <figcaption>Acero</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeWater">
                 <figure>
                     <img src="./images/Type/TypeWater.png" id="water" class="tipychoose" alt="Type Water">
                     <figcaption>Agua</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeBug">
                 <figure>
                     <img src="./images/Type/TypeBug.png" id="bug" class="tipychoose" alt="Type Bug">
                     <figcaption>Bicho</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeDragon">
                 <figure>
                     <img src="./images/Type/TypeDragon.png" id="dragon" class="tipychoose" alt="Type Dragon">
                     <figcaption>Dragón</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeElectric">
                 <figure>
                     <img src="./images/Type/TypeElectric.png" id="electric" class="tipychoose" alt="Type Electric">
                     <figcaption>Eléctrico</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeGhost">
                 <figure>
                     <img src="./images/Type/TypeGhost.png" id="ghost" class="tipychoose" alt="Type Ghost">
                     <figcaption>Fantasma</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeFire">
                 <figure>
                     <img src="./images/Type/TypeFire.png" id="fire" class="tipychoose" alt="Type Fire">
                     <figcaption>Fuego</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeFairy">
                 <figure>
                     <img src="./images/Type/TypeFairy.png" id="fairy" class="tipychoose" alt="Type Fairy">
                     <figcaption>Hada</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeIce">
                 <figure>
                     <img src="./images/Type/TypeIce.png" id="ice" class="tipychoose" alt="Type Ice">
                     <figcaption>Hielo</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeFighting">
                 <figure>
                     <img src="./images/Type/TypeFighting.png" id="fighting" class="tipychoose" alt="Pokédex Kanto">
                     <figcaption>Lucha</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeNormal">
                 <figure>
                     <img src="./images/Type/TypeNormal.png" id="normal" class="tipychoose" alt="Type Normal">
                     <figcaption>Normal</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeGrass">
                 <figure>
                     <img src="./images/Type/TypeGrass.png" id="grass" class="tipychoose" alt="Type Grass">
                     <figcaption>Planta</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypePsichic">
                 <figure>
                     <img src="./images/Type/TypePsichic.png" id="psichic" class="tipychoose" alt="Type Psichic">
                     <figcaption>Psíquico</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeRock">
                 <figure>
                     <img src="./images/Type/TypeRock.png" id="rock" class="tipychoose" alt="Type Rock">
                     <figcaption>Roca</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeGround">
                 <figure>
                     <img src="./images/Type/TypeGround.png" id="ground" class="tipychoose" alt="Type Ground">
                     <figcaption>Tierra</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeDark">
                 <figure>
                     <img src="./images/Type/TypeDark.png" id="dark" class="tipychoose" alt="Type Dark">
                     <figcaption>Oscuro</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypePoison">
                 <figure>
                     <img src="./images/Type/TypePoison.png" id="poison" class="tipychoose" alt="Type Poison">
                     <figcaption>Veneno</figcaption>
                 </figure>
             </a>
-            <a href="#pokeType">
+            <a href="#pokeTypeFlying">
                 <figure>
                     <img src="./images/Type/TypeFlying.png" id="flying" class="tipychoose" alt="Type Flying">
                     <figcaption>Volador</figcaption>
@@ -275,8 +306,25 @@
         </div>
     </section>
 
-    <section id="pokeType">
-    </section>
+    <section id="pokeTypeSteel"></section>
+    <section id="pokeTypeWater"></section>
+    <section id="pokeTypeBug"></section>
+    <section id="pokeTypeDragon"></section>
+    <section id="pokeTypeElectric"></section>
+    <section id="pokeTypeGhost"></section>
+    <section id="pokeTypeFire"></section>
+    <section id="pokeTypeFairy"></section>
+    <section id="pokeTypeIce"></section>
+    <section id="pokeTypeFighting"></section>
+    <section id="pokeTypeNormal"></section>
+    <section id="pokeTypeGrass"></section>
+    <section id="pokeTypePsichic"></section>
+    <section id="pokeTypeRock"></section>
+    <section id="pokeTypeGround"></section>
+    <section id="pokeTypeDark"></section>
+    <section id="pokeTypePoison"></section>
+    <section id="pokeTypeFlying"></section>
+
 
     <footer class="footer">
         <div class="main-footer">Copyright &copy; 2020 Constanza Brito - Linda Rizo para Laboratoria SCL-013

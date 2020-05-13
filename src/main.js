@@ -1,19 +1,35 @@
 import pokeData from './data/pokemon/pokemon.js';
-import { allPoke, orderDataAz, orderDataZa, orderDataNumDes, filterPokeTypeSteel, weaknessFilter, searchPokemon } from './data.js';
+import { allPoke, orderDataAz, orderDataZa, orderDataNumDes, filterPokemonType, searchPokemon, weaknessFilter } from './data.js';
 
 //Búsqueda interna (header) 
 
-const lupa = document.getElementById("lupa");
-lupa.addEventListener('keydown', function() {
+const formulario = document.getElementById("formulario");
+formulario.addEventListener('keydown', function() {
     if (event.which === 15 || event.keycode === 15 || event.key === "Enter") {
         event.preventDefault();
-        const busqueda = lupa.value;
-        const namePokemon = busqueda.charAt(0).toUpperCase() + busqueda.slice(1).toLowerCase();
+        const busqueda = formulario.value.toLowerCase();
+        const namePokemon = busqueda.toLowerCase();
         let pickPokemon = searchPokemon(dataPokedex, namePokemon);
         lookPokedex(pickPokemon);
     }
 });
+//lookPokedex(dataPokedex);
 
+/*const formulario = document.querySelector('#formulario');
+const lupa = document.querySelector('#lupa');
+
+const filterBySearch = () => {
+    const text = formulario.value.toLowerCase();
+    for (let pokemonName of dataPokedex) {
+        let pokeName = pokemonName.name.toLowerCase();
+        if (pokeName.indexOf(text) !== -1) {
+            lookPokedex(dataPokedex)
+        }
+    }
+}
+
+formulario.addEventListener('keyup', filterBySearch)
+lupa.addEventListener('keyup', filterBySearch)*/
 
 const card = document.getElementById("lookPoke");
 
@@ -48,18 +64,21 @@ lookPokedex(dataPokedex);
 
 
 //Para ordenar alfabéticamente (a-z / z-a)
-const menuPokedex = document.querySelector("#order");
+const menuPokedex = document.querySelector("#orderMenu");
 menuPokedex.addEventListener("change", () => {
-    const resultado = '$ {event.target.value}';
-    if (resultado === "A-Z") {
+    let resultOrder = menuPokedex.value;
+    if (resultOrder === "az") {
         lookPokedex(orderPokeAz);
     }
-    if (resultado === "Z-A") {
+    if (resultOrder === "za") {
         lookPokedex(orderPokeZa);
     }
-    if (resultado === "9-0") {
+    if (resultOrder === "9-0") {
         lookPokedex(orderPokeNumDes);
-    } else if (resultado === "0-9") {
+    }
+    if (resultOrder == "0-9") {
+        lookPokedex(dataPokedex);
+    } else if (resultOrder === "All") {
         lookPokedex(dataPokedex);
     }
 });
@@ -77,14 +96,38 @@ selectorPokeWeakness.addEventListener("change", () => {
 });
 
 //Filtrar por tipo
-const selectorPokeTypeSteel = document.querySelector("#pokeType");
-selectorPokeTypeSteel.addEventListener('click', () => {
-    let pokemonType = selectorPokeTypeSteel.value;
-    if (pokemonType === "Steel") {
-        let result = filterPokeTypeSteel(dataPokedex, pokemonType);
-        lookPokedex(result);
+
+const selectorPokeType = document.querySelector("#pokemonTypes");
+selectorPokeType.addEventListener("change", () => {
+    let pokemonFilterType = selectorPokeType.value;
+    if (pokemonFilterType === "allType") {
+        lookPokedex(dataPokedex);
+    } else {
+        let resultType = filterPokemonType(dataPokedex, pokemonFilterType);
+        lookPokedex(resultType);
     }
 });
+
+/*const pokeTypeSteel = document.getElementById("steel");
+pokeTypeSteel.addEventListener('click', () => {
+    let pokemonType = pokeTypeSteel.value;
+    if (pokemonType === "typePokemonAll") {
+        lookPokedex(dataPokedex);
+    } else {
+        let resultSteel = filterPokeTypeSteel(dataPokedex, pokemonType);
+        lookPokedex(resultSteel);
+    }
+});
+
+
+const pokeTypeWater = document.getElementById("water");
+pokeTypeWater.addEventListener('click', () => {
+    let pokemonType = pokeTypeWater.value;
+    if (pokemonType === "water") {
+        let resultWater = filterPokeTypeWater(dataPokedex, pokemonType);
+        lookPokedex(resultWater);
+    }
+});*/
 
 //Boton del menu (Entrenador)
 document.getElementById("allPokemonMenu").addEventListener("click", allPokemonMenu);
@@ -114,14 +157,6 @@ function buttonNovato() {
     let lookNovato = document.getElementById("novato");
     lookNovato.style.display = "block";
 }
-
-let mostrarNovato = () => {
-    document.getElementById("origin").style.display = "none";
-    document.getElementById("queEsUnPokemon").style.display = "";
-    document.getElementById("queEsUnPokedex").style.display = "";
-    document.getElementById("queEsUnTipoDePokemon").style.display = "";
-};
-document.getElementById("buttonNovato").addEventListener("click", mostrarNovato);
 
 
 //Muestra sección Entrenador

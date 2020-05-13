@@ -9,7 +9,6 @@ export const allPoke = (dataInfo) => {
 
 //Ordena alfabéticamente pokémon A-Z
 export const orderDataAz = (dataInfo) => {
-
     const newPokeArray = [];
     for (let i = 0; i < dataInfo.length; i++) {
         newPokeArray.push(dataInfo[i]);
@@ -54,6 +53,7 @@ export const orderDataNumDes = (dataInfo) => {
     }
 };
 
+
 //Filtra por debilidad de pokémon
 export const weaknessFilter = (dataInfo, debilPokemon) => {
     const newPokeArray = [];
@@ -66,21 +66,36 @@ export const weaknessFilter = (dataInfo, debilPokemon) => {
 //Búsqueda por nombre de pokémon
 export const searchPokemon = (dataInfo, searchInput) => {
     const search = dataInfo.filter((e) => {
-
         return (e.name.toLowerCase().includes(searchInput))
-
     });
     return search;
 }
 
 //Filtra por tipo de pokémon
+
+export const filterPokemonType = (dataInfo, pokeTipo) => {
+    const newDataArray = [];
+    for (let i = 0; i < dataInfo.length; i += 1) {
+        newDataArray.push(dataInfo[i]);
+    }
+    return newDataArray.filter(pokemon => pokemon.type.includes(pokeTipo));
+};
+
+/*export const filterPokeTypeWater = (dataInfo, Water) => {
+    const newPokeArray = [];
+    for (let i = 0; i < dataInfo.length; i += 1) {
+        newPokeArray.push(dataInfo[i]);
+    }
+    return newPokeArray.filter(pokemon => pokemon.type.includes(Water));
+};
+
 export const filterPokeTypeSteel = (dataInfo, Steel) => {
     const newPokeArray = [];
     for (let i = 0; i < dataInfo.length; i += 1) {
         newPokeArray.push(dataInfo[i]);
     }
     return newPokeArray.filter(pokemon => pokemon.type.includes(Steel));
-};
+};*/
 
 //Filtro por tipo de Pokémon
 

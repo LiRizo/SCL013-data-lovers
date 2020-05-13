@@ -89,6 +89,7 @@ input.form-control {
     margin-top: 25px;
     width: 30px;
     height: 30px;
+    margin-left: 3px;
 }
 
 #origin {
@@ -395,6 +396,11 @@ label {
 
 .pokePag {
     display: none;
+}
+
+.note {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
 }
 
 
