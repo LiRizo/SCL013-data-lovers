@@ -1,4 +1,5 @@
 //Nuevo array de la data
+//para todos
 export const allPoke = (dataInfo) => {
     const newPokeArray = [];
     for (let i = 0; i < dataInfo.length; i += 1) {
@@ -53,7 +54,6 @@ export const orderDataNumDes = (dataInfo) => {
     }
 };
 
-
 //Filtra por debilidad de pokémon
 export const weaknessFilter = (dataInfo, debilPokemon) => {
     const newPokeArray = [];
@@ -80,3 +80,4 @@ export const filterPokemonType = (dataInfo, pokeTipo) => {
     }
     return newDataArray.filter(pokemon => pokemon.type.includes(pokeTipo));
 };
+

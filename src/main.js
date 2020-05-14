@@ -23,7 +23,6 @@ const orderPokeAz = orderDataAz(allPoke);
 const orderPokeZa = orderDataZa(allPoke);
 const orderPokeNumDes = orderDataNumDes(allPoke);
 
-
 //Muestra tarjetas de pokémon en pantalla
 function lookPokedex(dataInfo) {
     let cardDesign = "";
