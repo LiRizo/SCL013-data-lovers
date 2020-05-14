@@ -31,7 +31,7 @@ En esta ocasión decidimos trabajar con:
 
   Invitamos a nuestros usuarios a ingresar al siguiente link que los llevará a disfrutar la experiencia de "PokéLovers"
 
-  [PokéLovers](link del deploy) *pendiente* 
+  [PokéLovers](https://conniebrito.github.io/SCL013-data-lovers/src/index.html) (Link GH-Pages)
 
 ## 2. Criterios del proyecto
 
