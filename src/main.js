@@ -2,9 +2,8 @@ import pokeData from './data/pokemon/pokemon.js';
 import { allPoke, orderDataAz, orderDataZa, orderDataNumDes, filterPokemonType, searchPokemon, weaknessFilter } from './data.js';
 
 //Búsqueda interna (header) 
-
 const formulario = document.getElementById("formulario");
-formulario.addEventListener('keydown', function() {
+formulario.addEventListener('keydown', function () {
     if (event.which === 15 || event.keycode === 15 || event.key === "Enter") {
         event.preventDefault();
         const busqueda = formulario.value.toLowerCase();
@@ -14,7 +13,6 @@ formulario.addEventListener('keydown', function() {
     }
 });
 //lookPokedex(dataPokedex);
-
 const card = document.getElementById("lookPoke");
 
 //Arreglo para llamar a la data de pokémon
@@ -42,9 +40,6 @@ function lookPokedex(dataInfo) {
     card.innerHTML = cardDesign;
 }
 lookPokedex(dataPokedex);
-
-//lookPokedex(dataPokedex);
-
 
 //Para ordenar alfabéticamente (a-z / z-a)
 const menuPokedex = document.querySelector("#orderMenu");
@@ -79,7 +74,6 @@ selectorPokeWeakness.addEventListener("change", () => {
 });
 
 //Filtrar por tipo general y por tipo individual
-
 const selectorPokeType = document.querySelector("#pokemonTypes");
 selectorPokeType.addEventListener("change", () => {
     let pokemonFilterType = selectorPokeType.value;
@@ -111,6 +105,163 @@ function lookPokedexType(dataInfo) {
     }
     cardType.innerHTML = cardDesignType;
 }
+
+
+//Modal ultra genial
+//Imagenes de los tipos
+const ResistanceAndWeaknesses = (dataPokedex) => {
+    let resistanceAndWeaknesses = '';
+    let resistanceList = '';
+    let weaknessesList = '';
+    dataPokedex.resistant.forEach((elementResistance) => {
+      resistanceList += `<img class="resist-weak-img" src="./images/Type/${elementWeaknesses}.png"/>`;
+    });
+    dataPokedex.weaknesses.forEach((elementWeaknesses) => {
+      weaknessesList += `<img class="resist-weak-img" src="./images/type/${elementWeaknesses}.png"/>`;
+    });
+    resistanceAndWeaknesses += `
+      <div class="resist-weak-ctn">
+      <h4 class="modal-h4">RESISTANCE</h4>
+      <div>${resistanceList}</div>
+    </div>
+    <div class="resist-weak-ctn">
+      <h4 class="modal-h4">WEAKNESSES</h4>
+      <div>${weaknessesList}</div>
+      </div>
+    `;
+    return resistanceAndWeaknesses;
+  };
+
+function lookModal(m) {
+    let modal = document.getElementById("myModal"); //Modal general html
+    let modalContainer = document.getElementById("modalContent"); //Modal cuadrito blanco html
+    let imgBtn = document.getElementsByClassName("elemCard"); //imagen que actua como boton. Ingresada en el js
+    modal.style.display = "none"; //Para esconder el modal general al cargar la página
+
+    for (let i = 0; i < imgBtn.length; i++) { //recorremos el for de las imagenes que creamos
+        let card1 = imgBtn[i]; //guardamos cada imagen en una variable con posición i
+
+        card1.addEventListener('click', () => { //agregamos el evento a la imagen
+            //console.log("ok");
+            modal.style.display = "block"; //al hacer click traemos el modal general
+            modalContainer.style.display = "block";
+            modalContainer.innerHTML += ` 
+            <div class="frame">
+                <div class="x">
+                    <span class="close">&times;</span>
+                </div>
+                <div  class="modalCharacters">
+                <div class="cardElem2">
+                   <h3>${m[i].num}</h3>
+                   <img src="${m[i].img}"/> 
+                    <h2>${m[i].name}</h2>
+               </div>
+                    <div class="characterInformation">
+                    <p>Peso: ${m[i].weight}</p>
+                    <p>Altura: ${m[i].height}</p>
+                    <p>Huevo: ${m[i].egg}</p>
+                    </div>
+                    <div class="characterInformation2">
+                        <h1>Tipo: ${m[i].type[0]}</h1>
+        <div class="modal__block4">
+          ${ResistanceAndWeaknesses(dataInfo)}
+        </div> 
+                        <p>Debilidad: ${m[i].weaknesses}</p>
+                        <h1>Evolución / Caramelos:</h1>
+                        <p> Pre Evolución: ${m[i].prev_evolution ? m[i].prev_evolution[0].num : ''}  ${m[i].prev_evolution ? m[i].prev_evolution[0].name : 'No tiene'}</p> 
+                        <p>Caramelo: ${m[i].candy}</p>
+                        <p>Caramelo: ${m[i].candy_count}</p>
+                        <p> Evolución: ${m[i].next_evolution ? m[i].next_evolution[0].num : ''}  ${m[i].next_evolution ? m[i].next_evolution[0].name : 'No tiene'}</p> 
+                    </div>
+                </div>
+            </div>`;
+
+            let span = document.getElementsByClassName("close")[0]; // al momento de cerrar, hace este evento/
+            span.addEventListener('click', () => { //evento del click en la x
+                modal.style.display = "none"; //Escondemos el modal general
+                modalContainer.innerHTML = ""; //Limpiamos el modal con la informacion (cuadrito blanco)
+            });
+        });
+
+        window.onclick = function (event) { //evento para que al hacer click fuera del modal se cierre
+            if (event.target == modal) {
+                modal.style.display = "none";
+                modalContainer.innerHTML = "";
+            }
+        }
+    }
+}
+lookModal(dataPokedex);
+//___________________________________________________________________________
+//boton logo
+document.getElementById("LogoP").addEventListener("click", () => {
+    document.getElementById("origin").style.display = "block";
+    document.getElementById("novato").style.display = "none";
+    document.getElementById("entrenador").style.display = "none";
+    document.getElementById("pokedexKanto").style.display = "none";
+    document.getElementById("pokedexKanto").style.display = "none";
+    document.getElementById("typePokemon").style.display = "none";
+    lookModal(dataPokedex);
+});
+
+//Boton del menu (Entrenador)
+document.getElementById("allPokemonMenu").addEventListener("click", allPokemonMenu);
+
+function allPokemonMenu() {
+    let originActual = document.getElementById("origin");
+    originActual.style.display = "none";
+    let lookPokedex = document.getElementById("pokedexKanto");
+    lookPokedex.style.display = "block";
+}
+document.getElementById("typeMenu").addEventListener("click", typeMenu);
+
+function typeMenu() {
+    let originActual = document.getElementById("origin");
+    originActual.style.display = "none";
+    let lookType = document.getElementById("typePokemon");
+    lookType.style.display = "block";
+}
+//Parte de los botones 
+//Muestra sección Novato
+
+/*document.getElementById("buttonNovato").addEventListener("click", buttonNovato);
+
+function buttonNovato() {
+    let originActual = document.getElementById("origin");
+    originActual.style.display = "none";
+    let lookNovato = document.getElementById("novato");
+    lookNovato.style.display = "block";
+}*/
+//Muestra sección Entrenador
+document.getElementById("buttonEntrenador").addEventListener("click", buttonEntrenador);
+
+function buttonEntrenador() {
+    let originActual = document.getElementById("origin");
+    originActual.style.display = "none";
+    let lookEntrenador = document.getElementById("entrenador");
+    lookEntrenador.style.display = "block";
+}
+
+//Muestra sección Tipos de Pokémon
+document.getElementById("typePokeBtn").addEventListener("click", typePokeBtn);
+
+function typePokeBtn() {
+    let entrenadorActual = document.getElementById("entrenador");
+    entrenadorActual.style.display = "none";
+    let lookTypePokemon = document.getElementById("typePokemon");
+    lookTypePokemon.style.display = "block";
+}
+//Muestra sección Pokédex Kanto
+document.getElementById("allPokeBtn").addEventListener("click", allPokeBtn);
+
+function allPokeBtn() {
+    let entrenadorActual = document.getElementById("entrenador");
+    entrenadorActual.style.display = "none";
+    let lookPokemon = document.getElementById("pokedexKanto");
+    lookPokemon.style.display = "block";
+}
+//_________________________________________________________________________
+//Parte de la pantalla de Tipos
 lookPokedexType(dataPokedex);
 
 const pokeTypeWater = document.getElementById("water");
@@ -202,122 +353,3 @@ pokeTypeFlying.addEventListener('click', () => {
     let resultType = filterPokemonType(dataPokedex, "Flying");
     lookPokedexType(resultType);
 });
-
-//Modal ultra genial
-function lookModal(m) {
-    let modal = document.getElementById("myModal"); //Modal general html
-    let modalContainer = document.getElementById("modalContent"); //Modal cuadrito blanco html
-    let imgBtn = document.getElementsByClassName("elemCard"); //imagen que actua como boton. Ingresada en el js
-    modal.style.display = "none"; //Para esconder el modal general al cargar la página
-
-    for (let i = 0; i < imgBtn.length; i++) { //recorremos el for de las imagenes que creamos
-        let card1 = imgBtn[i]; //guardamos cada imagen en una variable con posición i
-
-        card1.addEventListener('click', () => { //agregamos el evento a la imagen
-            //console.log("ok");
-            modal.style.display = "block"; //al hacer click traemos el modal general
-            modalContainer.style.display = "block";
-            modalContainer.innerHTML += ` 
-            <div class="frame">
-                <div class="x">
-                    <span class="close">&times;</span>
-                </div>
-                <div  class="modalCharacters">
-                <div class="cardElem2">
-                   <h3>${m[i].num}</h3>
-                   <img src="${m[i].img}"/> 
-                    <h2>${m[i].name}</h2>
-               </div>
-                    <div class="characterInformation">
-                    <p>Peso: ${m[i].weight}</p>
-                    <p>Altura: ${m[i].height}</p>
-                    <p>Huevo: ${m[i].egg}</p>
-                    </div>
-                    <div class="characterInformation2">
-                        <h1>Tipo: ${m[i].type[0]}</h1>
-                        
-                        <p>Debilidad: ${m[i].weaknesses}</p>
-                        <h1>Evolución / Caramelos:</h1>
-                        <p> Pre Evolución: ${m[i].prev_evolution ? m[i].prev_evolution[0].num : ''}  ${m[i].prev_evolution ? m[i].prev_evolution[0].name : 'No tiene'}</p> 
-                        <p>Caramelo: ${m[i].candy}</p>
-                        <p>Caramelo: ${m[i].candy_count}</p>
-                        <p> Evolución: ${m[i].next_evolution ? m[i].next_evolution[0].num : ''}  ${m[i].next_evolution ? m[i].next_evolution[0].name : 'No tiene'}</p> 
-                    </div>
-                </div>
-            </div>`;
-
-            let span = document.getElementsByClassName("close")[0]; // al momento de cerrar, hace este evento/
-            span.addEventListener('click', () => { //evento del click en la x
-                modal.style.display = "none"; //Escondemos el modal general
-                modalContainer.innerHTML = ""; //Limpiamos el modal con la informacion (cuadrito blanco)
-            });
-        });
-
-        window.onclick = function(event) { //evento para que al hacer click fuera del modal se cierre
-            if (event.target == modal) {
-                modal.style.display = "none";
-                modalContainer.innerHTML = "";
-            }
-        }
-    }
-}
-lookModal(dataPokedex);
-
-//Boton del menu (Entrenador)
-document.getElementById("allPokemonMenu").addEventListener("click", allPokemonMenu);
-
-function allPokemonMenu() {
-    let originActual = document.getElementById("origin");
-    originActual.style.display = "none";
-    let lookPokedex = document.getElementById("pokedexKanto");
-    lookPokedex.style.display = "block";
-}
-document.getElementById("typeMenu").addEventListener("click", typeMenu);
-
-function typeMenu() {
-    let originActual = document.getElementById("origin");
-    originActual.style.display = "none";
-    let lookType = document.getElementById("typePokemon");
-    lookType.style.display = "block";
-}
-//Parte de los botones 
-//Muestra sección Novato
-
-/*document.getElementById("buttonNovato").addEventListener("click", buttonNovato);
-
-function buttonNovato() {
-    let originActual = document.getElementById("origin");
-    originActual.style.display = "none";
-    let lookNovato = document.getElementById("novato");
-    lookNovato.style.display = "block";
-}*/
-
-
-//Muestra sección Entrenador
-document.getElementById("buttonEntrenador").addEventListener("click", buttonEntrenador);
-
-function buttonEntrenador() {
-    let originActual = document.getElementById("origin");
-    originActual.style.display = "none";
-    let lookEntrenador = document.getElementById("entrenador");
-    lookEntrenador.style.display = "block";
-}
-
-//Muestra sección Tipos de Pokémon
-document.getElementById("typePokeBtn").addEventListener("click", typePokeBtn);
-
-function typePokeBtn() {
-    let entrenadorActual = document.getElementById("entrenador");
-    entrenadorActual.style.display = "none";
-    let lookTypePokemon = document.getElementById("typePokemon");
-    lookTypePokemon.style.display = "block";
-}
-//Muestra sección Pokédex Kanto
-document.getElementById("allPokeBtn").addEventListener("click", allPokeBtn);
-
-function allPokeBtn() {
-    let entrenadorActual = document.getElementById("entrenador");
-    entrenadorActual.style.display = "none";
-    let lookPokemon = document.getElementById("pokedexKanto");
-    lookPokemon.style.display = "block";
-}

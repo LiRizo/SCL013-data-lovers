@@ -1,4 +1,4 @@
-//Nuevo array de la data
+
 //para todos
 export const allPoke = (dataInfo) => {
     const newPokeArray = [];
@@ -81,3 +81,7 @@ export const filterPokemonType = (dataInfo, pokeTipo) => {
     return newDataArray.filter(pokemon => pokemon.type.includes(pokeTipo));
 };
 
+export const FilterPokemonByResistantType = (dataInfo, typeResistant) => {
+    const arrByType = dataInfo.filter((element) => element.resistant.includes(typeResistant.toLowerCase()));
+    return arrByType;
+  };
