@@ -27,32 +27,30 @@ export const orderDataAz = (dataInfo) => {
 };
 
 //Ordena alfabéticamente pokémon Z-A
-export const orderDataZa = (dataInfo) => {
+export const orderDataZa = (dataInfo)=>{
     const newPokeArray = [];
-    for (let i = 0; i < dataInfo.length; i += 1) {
+    for (let i = 0; i < dataInfo.length; i ++) {
         newPokeArray.push(dataInfo[i]);
     }
     newPokeArray.sort((a, b) => {
-        if (a.name > b.name) {
-            return -1;
-        }
-        if (a.name < b.name) {
-            return 1;
-        }
-        return 0;
+      if (a.name > b.name) {
+        return -1;
+      }
+      if (a.name < b.name) {
+        return 1;
+      }
+      return 0;
     });
     return newPokeArray;
-};
-
-//Ordena pokémon por número #151 - #001
-export const orderDataNumDes = (dataInfo) => {
+  };
+  //Ordena Pokemones por de manera descendiente 151 al 1
+  export const orderDataNumDes = (dataInfo)=>{
     const newPokeArray = [];
-    for (let i = 0; i < dataInfo.length; i += 1) {
+    for (let i = 0; i < dataInfo.length; i ++) {
         newPokeArray.push(dataInfo[i]);
-        newPokeArray.sort((a, b) => parseInt(b.num - a.num));
-        return newPokeArray;
     }
-};
+    newPokeArray.sort((a, b) => parseInt(b.num -a.num)); return newPokeArray;
+  };
 
 //Filtra por debilidad de pokémon
 export const weaknessFilter = (dataInfo, debilPokemon) => {
@@ -81,7 +79,3 @@ export const filterPokemonType = (dataInfo, pokeTipo) => {
     return newDataArray.filter(pokemon => pokemon.type.includes(pokeTipo));
 };
 
-export const FilterPokemonByResistantType = (dataInfo, typeResistant) => {
-    const arrByType = dataInfo.filter((element) => element.resistant.includes(typeResistant.toLowerCase()));
-    return arrByType;
-  };
